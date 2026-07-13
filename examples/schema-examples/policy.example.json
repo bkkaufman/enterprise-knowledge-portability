@@ -1,0 +1,79 @@
+{
+  "id": "policy-access-review-synthetic",
+  "object_type": "policy",
+  "title": "Synthetic Access Review Policy",
+  "description": "A synthetic policy requiring periodic review of access to example business systems.",
+  "status": "active",
+  "version": "v1.0",
+  "effective_date": "2026-01-01",
+  "expiration_date": null,
+  "supersedes": [],
+  "authoritative_source": "Synthetic Policy Committee",
+  "source_uri": "https://sources.example.invalid/policies/access-review",
+  "owner": "owner-governance-office-synthetic",
+  "steward": "steward-access-governance-synthetic",
+  "jurisdiction": [
+    "jurisdiction-global-synthetic"
+  ],
+  "applicability": [
+    "capability-customer-record-management-synthetic",
+    "system-customer-directory-synthetic"
+  ],
+  "classification": "public_example",
+  "access_policy": {
+    "policy_id": "access-policy-public-example-synthetic",
+    "allowed_uses": [
+      "read",
+      "validate",
+      "transform",
+      "publish_example"
+    ],
+    "denied_uses": [
+      "production_decisioning"
+    ],
+    "handling_notes": "Synthetic public reference policy. Do not treat as operating guidance."
+  },
+  "provenance": {
+    "created_by": "author-public-reference-synthetic",
+    "created_date": "2026-01-01",
+    "method": "synthetic_authoring",
+    "change_summary": "Initial synthetic policy example."
+  },
+  "last_reviewed_date": "2026-06-30",
+  "related_objects": [
+    {
+      "id": "control-quarterly-access-review-synthetic",
+      "relationship_type": "requires"
+    }
+  ],
+  "assertions": [
+    {
+      "assertion_id": "assertion-access-review-required-synthetic",
+      "predicate": "requires review frequency",
+      "object": "quarterly",
+      "confidence": "declared"
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "evidence-access-review-policy-summary-synthetic",
+      "summary": "Synthetic policy approval note for the example record.",
+      "uri": "https://sources.example.invalid/evidence/access-review-policy-summary"
+    }
+  ],
+  "policy_category": "access_management",
+  "policy_statement": "Access to synthetic customer record systems must be reviewed on a recurring schedule.",
+  "obligations": [
+    {
+      "obligation_id": "obligation-quarterly-access-review-synthetic",
+      "statement": "Review privileged and standard access to synthetic customer record systems at least quarterly.",
+      "applies_to": [
+        "system-customer-directory-synthetic"
+      ],
+      "assertion_ids": [
+        "assertion-access-review-required-synthetic"
+      ]
+    }
+  ],
+  "exception_process": "Exceptions require synthetic owner approval and a dated review note."
+}

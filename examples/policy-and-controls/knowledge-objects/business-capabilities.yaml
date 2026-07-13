@@ -1,0 +1,54 @@
+records:
+  - id: capability-customer-record-management-synthetic
+    object_type: business_capability
+    name: Customer Record Management
+    summary: Maintains synthetic customer records used by regulated service processes.
+    lifecycle_status: active
+    effective_from: 2026-01-01
+    effective_to: null
+    supersedes: []
+    superseded_by: null
+    source_authority:
+      authority_id: authority-business-architecture-office-synthetic
+      authority_type: committee
+      authority_url: https://governance.example.invalid/authorities/business-architecture-office
+    permissions:
+      classification: public_example
+      allowed_uses:
+        - architecture_reference
+        - synthetic_demo
+      denied_uses:
+        - production_compliance_attestation
+    provenance:
+      created_by: author-business-architecture-office-synthetic
+      created_at: 2025-12-01
+      last_reviewed_at: 2026-01-01
+      derivation: synthetic
+      source_record_url: https://governance.example.invalid/capabilities/customer-record-management
+  - id: capability-financial-reporting-synthetic
+    object_type: business_capability
+    name: Financial Reporting
+    summary: Produces synthetic regulated financial reports for internal and external stakeholders.
+    lifecycle_status: active
+    effective_from: 2026-01-01
+    effective_to: null
+    supersedes: []
+    superseded_by: null
+    source_authority:
+      authority_id: authority-business-architecture-office-synthetic
+      authority_type: committee
+      authority_url: https://governance.example.invalid/authorities/business-architecture-office
+    permissions:
+      classification: public_example
+      allowed_uses:
+        - architecture_reference
+        - synthetic_demo
+      denied_uses:
+        - production_compliance_attestation
+    provenance:
+      created_by: author-business-architecture-office-synthetic
+      created_at: 2025-12-01
+      last_reviewed_at: 2026-01-01
+      derivation: synthetic
+      source_record_url: https://governance.example.invalid/capabilities/financial-reporting
+

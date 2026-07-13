@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.example.invalid/enterprise-knowledge-portability/relationship.schema.json",
+  "title": "Portable Knowledge Relationship",
+  "description": "Synthetic relationship record that connects two portable knowledge objects.",
+  "allOf": [
+    {
+      "$ref": "knowledge-object.schema.json"
+    },
+    {
+      "type": "object",
+      "required": [
+        "relationship_type",
+        "from_object",
+        "to_object",
+        "rationale"
+      ],
+      "properties": {
+        "object_type": {
+          "const": "relationship"
+        },
+        "relationship_type": {
+          "type": "string",
+          "enum": [
+            "requires_control",
+            "implements_policy",
+            "operates_on_system",
+            "owned_by",
+            "stewarded_by",
+            "applies_to_jurisdiction",
+            "covers_capability",
+            "supersedes",
+            "conflicts_with",
+            "references"
+          ]
+        },
+        "from_object": {
+          "$ref": "knowledge-object.schema.json#/$defs/syntheticId"
+        },
+        "to_object": {
+          "$ref": "knowledge-object.schema.json#/$defs/syntheticId"
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  ],
+  "unevaluatedProperties": false
+}

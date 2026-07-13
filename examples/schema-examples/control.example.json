@@ -1,0 +1,81 @@
+{
+  "id": "control-quarterly-access-review-synthetic",
+  "object_type": "control",
+  "title": "Synthetic Quarterly Access Review Control",
+  "description": "A synthetic control for reviewing access to an example customer directory system.",
+  "status": "active",
+  "version": "v1.0",
+  "effective_date": "2026-01-01",
+  "expiration_date": null,
+  "supersedes": [],
+  "authoritative_source": "Synthetic Control Library",
+  "source_uri": "https://sources.example.invalid/controls/quarterly-access-review",
+  "owner": "owner-access-operations-synthetic",
+  "steward": "steward-access-governance-synthetic",
+  "jurisdiction": [
+    "jurisdiction-global-synthetic"
+  ],
+  "applicability": [
+    "capability-customer-record-management-synthetic",
+    "system-customer-directory-synthetic"
+  ],
+  "classification": "public_example",
+  "access_policy": {
+    "policy_id": "access-policy-public-example-synthetic",
+    "allowed_uses": [
+      "read",
+      "validate",
+      "transform",
+      "publish_example"
+    ],
+    "denied_uses": [
+      "production_decisioning"
+    ],
+    "handling_notes": "Synthetic control example. Do not use as a production control."
+  },
+  "provenance": {
+    "created_by": "author-public-reference-synthetic",
+    "created_date": "2026-01-01",
+    "method": "synthetic_authoring",
+    "change_summary": "Initial synthetic control example."
+  },
+  "last_reviewed_date": "2026-06-30",
+  "related_objects": [
+    {
+      "id": "policy-access-review-synthetic",
+      "relationship_type": "implements"
+    }
+  ],
+  "assertions": [
+    {
+      "assertion_id": "assertion-control-frequency-quarterly-synthetic",
+      "predicate": "operates every",
+      "object": "quarter",
+      "confidence": "declared"
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "evidence-access-review-sample-synthetic",
+      "summary": "Synthetic evidence checklist showing the expected access review artifacts.",
+      "uri": "https://sources.example.invalid/evidence/access-review-sample"
+    }
+  ],
+  "control_category": "access_review",
+  "control_objective": "Confirm that access to the synthetic customer directory remains appropriate.",
+  "control_type": "detective",
+  "operating_frequency": "quarterly",
+  "systems": [
+    "system-customer-directory-synthetic"
+  ],
+  "mapped_obligations": [
+    "obligation-quarterly-access-review-synthetic"
+  ],
+  "evidence_expectations": [
+    {
+      "evidence_type": "Access review completion record",
+      "expected_frequency": "quarterly",
+      "retention_period": "two synthetic review cycles"
+    }
+  ]
+}

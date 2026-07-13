@@ -1,0 +1,82 @@
+records:
+  - id: control-privileged-access-review-synthetic
+    object_type: control
+    control_id: control-privileged-access-review-synthetic
+    name: Privileged Access Review Control
+    summary: Confirms that privileged access to regulated systems is reviewed by accountable owners on a quarterly basis.
+    lifecycle_status: active
+    effective_from: 2026-01-01
+    effective_to: null
+    supersedes: []
+    superseded_by: null
+    control_objective: Detect and remove inappropriate privileged access for regulated systems.
+    control_frequency: quarterly
+    systems:
+      - system-identity-admin-console-synthetic
+      - system-customer-record-platform-synthetic
+    owners:
+      - owner-identity-control-owner-synthetic
+      - owner-customer-record-system-owner-synthetic
+    evidence_expectations:
+      - Completed access review export.
+      - Owner approval record.
+      - Exception log with remediation status.
+    source_authority:
+      authority_id: authority-identity-control-owner-synthetic
+      authority_type: control_owner
+      authority_url: https://governance.example.invalid/authorities/identity-control-owner
+    permissions:
+      classification: public_example
+      allowed_uses:
+        - architecture_reference
+        - schema_validation
+        - synthetic_demo
+      denied_uses:
+        - production_compliance_attestation
+    provenance:
+      created_by: author-control-library-synthetic
+      created_at: 2025-12-01
+      last_reviewed_at: 2026-01-10
+      derivation: synthetic
+      source_record_url: https://governance.example.invalid/controls/control-privileged-access-review-synthetic
+  - id: control-material-change-approval-synthetic
+    object_type: control
+    control_id: control-material-change-approval-synthetic
+    name: Material Change Approval Control
+    summary: Confirms that material changes to regulated systems receive documented owner approval before implementation.
+    lifecycle_status: active
+    effective_from: 2026-02-01
+    effective_to: null
+    supersedes: []
+    superseded_by: null
+    control_objective: Prevent unapproved material changes to systems supporting regulated business capabilities.
+    control_frequency: event_based
+    systems:
+      - system-change-request-register-synthetic
+      - system-financial-reporting-platform-synthetic
+    owners:
+      - owner-technology-risk-owner-synthetic
+      - owner-financial-reporting-system-owner-synthetic
+    evidence_expectations:
+      - Approved change request.
+      - Impact assessment.
+      - Implementation timestamp.
+    source_authority:
+      authority_id: authority-technology-risk-owner-synthetic
+      authority_type: control_owner
+      authority_url: https://governance.example.invalid/authorities/technology-risk-owner
+    permissions:
+      classification: public_example
+      allowed_uses:
+        - architecture_reference
+        - schema_validation
+        - synthetic_demo
+      denied_uses:
+        - production_compliance_attestation
+    provenance:
+      created_by: author-control-library-synthetic
+      created_at: 2026-01-15
+      last_reviewed_at: 2026-02-01
+      derivation: synthetic
+      source_record_url: https://governance.example.invalid/controls/control-material-change-approval-synthetic
+

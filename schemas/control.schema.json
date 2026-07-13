@@ -1,0 +1,108 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.example.invalid/enterprise-knowledge-portability/control.schema.json",
+  "title": "Portable Operational Control",
+  "description": "Synthetic portable operational control record composed from the common knowledge object envelope.",
+  "allOf": [
+    {
+      "$ref": "knowledge-object.schema.json"
+    },
+    {
+      "type": "object",
+      "required": [
+        "control_category",
+        "control_objective",
+        "control_type",
+        "operating_frequency",
+        "systems",
+        "mapped_obligations",
+        "evidence_expectations"
+      ],
+      "properties": {
+        "object_type": {
+          "const": "control"
+        },
+        "control_category": {
+          "type": "string",
+          "enum": [
+            "access_review",
+            "change_control",
+            "data_quality",
+            "records_retention",
+            "resilience_testing"
+          ]
+        },
+        "control_objective": {
+          "type": "string",
+          "minLength": 1
+        },
+        "control_type": {
+          "type": "string",
+          "enum": [
+            "preventive",
+            "detective",
+            "corrective"
+          ]
+        },
+        "operating_frequency": {
+          "type": "string",
+          "enum": [
+            "event_based",
+            "daily",
+            "weekly",
+            "monthly",
+            "quarterly",
+            "annual"
+          ]
+        },
+        "systems": {
+          "type": "array",
+          "items": {
+            "$ref": "knowledge-object.schema.json#/$defs/syntheticId"
+          },
+          "uniqueItems": true
+        },
+        "mapped_obligations": {
+          "type": "array",
+          "items": {
+            "$ref": "knowledge-object.schema.json#/$defs/syntheticId"
+          },
+          "uniqueItems": true
+        },
+        "evidence_expectations": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "evidence_type",
+              "expected_frequency",
+              "retention_period"
+            ],
+            "properties": {
+              "evidence_type": {
+                "type": "string",
+                "minLength": 1
+              },
+              "expected_frequency": {
+                "type": "string",
+                "enum": [
+                  "per_event",
+                  "monthly",
+                  "quarterly",
+                  "annual"
+                ]
+              },
+              "retention_period": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      }
+    }
+  ],
+  "unevaluatedProperties": false
+}

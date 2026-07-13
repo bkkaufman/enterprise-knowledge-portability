@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.example.invalid/enterprise-knowledge-portability/policy.schema.json",
+  "title": "Portable Policy",
+  "description": "Synthetic portable policy record composed from the common knowledge object envelope.",
+  "allOf": [
+    {
+      "$ref": "knowledge-object.schema.json"
+    },
+    {
+      "type": "object",
+      "required": [
+        "policy_category",
+        "policy_statement",
+        "obligations",
+        "exception_process"
+      ],
+      "properties": {
+        "object_type": {
+          "const": "policy"
+        },
+        "policy_category": {
+          "type": "string",
+          "enum": [
+            "access_management",
+            "data_governance",
+            "records_management",
+            "operational_resilience",
+            "third_party_management"
+          ]
+        },
+        "policy_statement": {
+          "type": "string",
+          "minLength": 1
+        },
+        "obligations": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "obligation_id",
+              "statement",
+              "applies_to",
+              "assertion_ids"
+            ],
+            "properties": {
+              "obligation_id": {
+                "$ref": "knowledge-object.schema.json#/$defs/syntheticId"
+              },
+              "statement": {
+                "type": "string",
+                "minLength": 1
+              },
+              "applies_to": {
+                "type": "array",
+                "items": {
+                  "$ref": "knowledge-object.schema.json#/$defs/syntheticId"
+                },
+                "uniqueItems": true
+              },
+              "assertion_ids": {
+                "type": "array",
+                "items": {
+                  "$ref": "knowledge-object.schema.json#/$defs/syntheticId"
+                },
+                "uniqueItems": true
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "exception_process": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  ],
+  "unevaluatedProperties": false
+}

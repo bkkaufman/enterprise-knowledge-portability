@@ -1,0 +1,319 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.example.invalid/enterprise-knowledge-portability/knowledge-object.schema.json",
+  "title": "Portable Knowledge Object",
+  "description": "Common envelope for synthetic portable enterprise knowledge records.",
+  "type": "object",
+  "required": [
+    "id",
+    "object_type",
+    "title",
+    "description",
+    "status",
+    "version",
+    "effective_date",
+    "expiration_date",
+    "supersedes",
+    "authoritative_source",
+    "source_uri",
+    "owner",
+    "steward",
+    "jurisdiction",
+    "applicability",
+    "classification",
+    "access_policy",
+    "provenance",
+    "last_reviewed_date",
+    "related_objects",
+    "assertions",
+    "evidence"
+  ],
+  "properties": {
+    "id": {
+      "$ref": "#/$defs/syntheticId"
+    },
+    "object_type": {
+      "type": "string",
+      "enum": [
+        "knowledge_object",
+        "policy",
+        "control",
+        "relationship",
+        "business_capability",
+        "system",
+        "owner",
+        "jurisdiction"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "active",
+        "inactive",
+        "superseded",
+        "retired",
+        "conflicted"
+      ]
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^v[0-9]+(\\.[0-9]+){0,2}$"
+    },
+    "effective_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "expiration_date": {
+      "$ref": "#/$defs/dateOrNull"
+    },
+    "supersedes": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/syntheticId"
+      },
+      "uniqueItems": true
+    },
+    "authoritative_source": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_uri": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https://[a-z0-9.-]+\\.example\\.invalid(/.*)?$"
+    },
+    "owner": {
+      "$ref": "#/$defs/syntheticId"
+    },
+    "steward": {
+      "$ref": "#/$defs/syntheticId"
+    },
+    "jurisdiction": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/syntheticId"
+      },
+      "uniqueItems": true
+    },
+    "applicability": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/syntheticId"
+      },
+      "uniqueItems": true
+    },
+    "classification": {
+      "type": "string",
+      "enum": [
+        "public_example",
+        "internal_example",
+        "restricted_example"
+      ]
+    },
+    "access_policy": {
+      "$ref": "#/$defs/accessPolicy"
+    },
+    "provenance": {
+      "$ref": "#/$defs/provenance"
+    },
+    "last_reviewed_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "related_objects": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/relatedObject"
+      },
+      "uniqueItems": true
+    },
+    "assertions": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/assertion"
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/evidence"
+      }
+    }
+  },
+  "$defs": {
+    "syntheticId": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9]*(?:-[a-z0-9]+)*-synthetic$"
+    },
+    "dateOrNull": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "relatedObject": {
+      "type": "object",
+      "required": [
+        "id",
+        "relationship_type"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/syntheticId"
+        },
+        "relationship_type": {
+          "type": "string",
+          "enum": [
+            "requires",
+            "implements",
+            "applies_to",
+            "owned_by",
+            "stewarded_by",
+            "supersedes",
+            "conflicts_with",
+            "references"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "accessPolicy": {
+      "type": "object",
+      "required": [
+        "policy_id",
+        "allowed_uses",
+        "denied_uses",
+        "handling_notes"
+      ],
+      "properties": {
+        "policy_id": {
+          "$ref": "#/$defs/syntheticId"
+        },
+        "allowed_uses": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "read",
+              "validate",
+              "transform",
+              "publish_example"
+            ]
+          },
+          "uniqueItems": true
+        },
+        "denied_uses": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "production_decisioning",
+              "external_distribution",
+              "privileged_access"
+            ]
+          },
+          "uniqueItems": true
+        },
+        "handling_notes": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "provenance": {
+      "type": "object",
+      "required": [
+        "created_by",
+        "created_date",
+        "method",
+        "change_summary"
+      ],
+      "properties": {
+        "created_by": {
+          "$ref": "#/$defs/syntheticId"
+        },
+        "created_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "method": {
+          "type": "string",
+          "enum": [
+            "synthetic_authoring",
+            "synthetic_import",
+            "derived_from_synthetic_source"
+          ]
+        },
+        "change_summary": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "assertion": {
+      "type": "object",
+      "required": [
+        "assertion_id",
+        "predicate",
+        "object",
+        "confidence"
+      ],
+      "properties": {
+        "assertion_id": {
+          "$ref": "#/$defs/syntheticId"
+        },
+        "predicate": {
+          "type": "string",
+          "minLength": 1
+        },
+        "object": {
+          "type": "string",
+          "minLength": 1
+        },
+        "confidence": {
+          "type": "string",
+          "enum": [
+            "declared",
+            "reviewed",
+            "inferred"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "evidence": {
+      "type": "object",
+      "required": [
+        "evidence_id",
+        "summary",
+        "uri"
+      ],
+      "properties": {
+        "evidence_id": {
+          "$ref": "#/$defs/syntheticId"
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "uri": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https://[a-z0-9.-]+\\.example\\.invalid(/.*)?$"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

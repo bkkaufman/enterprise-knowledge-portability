@@ -1,0 +1,98 @@
+relationships:
+  - id: relationship-policy-access-review-requires-control-privileged-access-review-synthetic
+    relationship_type: requires_control
+    from: policy-access-review-v2-synthetic
+    to: control-privileged-access-review-synthetic
+    valid_from: 2026-01-01
+    valid_to: null
+    rationale: The access review policy obligation is implemented by the privileged access review control.
+    source_authority:
+      authority_id: authority-policy-standards-board-synthetic
+      authority_type: board
+      authority_url: https://governance.example.invalid/authorities/policy-standards-board
+    permissions:
+      classification: public_example
+      allowed_uses:
+        - architecture_reference
+        - synthetic_demo
+      denied_uses:
+        - production_compliance_attestation
+    provenance:
+      created_by: author-policy-office-synthetic
+      created_at: 2026-01-01
+      last_reviewed_at: 2026-01-10
+      derivation: synthetic
+      source_record_url: https://governance.example.invalid/relationships/rel-policy-access-review-control
+  - id: relationship-policy-change-approval-requires-control-material-change-approval-synthetic
+    relationship_type: requires_control
+    from: policy-change-approval-v1-synthetic
+    to: control-material-change-approval-synthetic
+    valid_from: 2026-02-01
+    valid_to: null
+    rationale: The material change approval policy obligation is implemented by the material change approval control.
+    source_authority:
+      authority_id: authority-policy-standards-board-synthetic
+      authority_type: board
+      authority_url: https://governance.example.invalid/authorities/policy-standards-board
+    permissions:
+      classification: public_example
+      allowed_uses:
+        - architecture_reference
+        - synthetic_demo
+      denied_uses:
+        - production_compliance_attestation
+    provenance:
+      created_by: author-policy-office-synthetic
+      created_at: 2026-02-01
+      last_reviewed_at: 2026-02-01
+      derivation: synthetic
+      source_record_url: https://governance.example.invalid/relationships/rel-policy-change-control
+  - id: relationship-control-privileged-access-review-operates-on-system-identity-admin-console-synthetic
+    relationship_type: operates_on_system
+    from: control-privileged-access-review-synthetic
+    to: system-identity-admin-console-synthetic
+    valid_from: 2026-01-01
+    valid_to: null
+    rationale: The control uses identity administration access data as review input.
+    source_authority:
+      authority_id: authority-identity-control-owner-synthetic
+      authority_type: control_owner
+      authority_url: https://governance.example.invalid/authorities/identity-control-owner
+    permissions:
+      classification: public_example
+      allowed_uses:
+        - architecture_reference
+        - synthetic_demo
+      denied_uses:
+        - production_compliance_attestation
+    provenance:
+      created_by: author-control-library-synthetic
+      created_at: 2026-01-01
+      last_reviewed_at: 2026-01-10
+      derivation: synthetic
+      source_record_url: https://governance.example.invalid/relationships/rel-control-system-identity
+  - id: relationship-control-material-change-approval-owned-by-technology-risk-owner-synthetic
+    relationship_type: owned_by
+    from: control-material-change-approval-synthetic
+    to: owner-technology-risk-owner-synthetic
+    valid_from: 2026-02-01
+    valid_to: null
+    rationale: The technology risk owner is accountable for operation of the material change approval control.
+    source_authority:
+      authority_id: authority-technology-risk-owner-synthetic
+      authority_type: control_owner
+      authority_url: https://governance.example.invalid/authorities/technology-risk-owner
+    permissions:
+      classification: public_example
+      allowed_uses:
+        - architecture_reference
+        - synthetic_demo
+      denied_uses:
+        - production_compliance_attestation
+    provenance:
+      created_by: author-control-library-synthetic
+      created_at: 2026-02-01
+      last_reviewed_at: 2026-02-01
+      derivation: synthetic
+      source_record_url: https://governance.example.invalid/relationships/rel-control-owner-technology-risk
+

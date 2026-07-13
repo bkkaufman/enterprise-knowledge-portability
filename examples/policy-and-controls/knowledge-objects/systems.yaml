@@ -1,0 +1,106 @@
+records:
+  - id: system-identity-admin-console-synthetic
+    object_type: system
+    name: Identity Administration Console
+    summary: Synthetic administration system for managing privileged access.
+    lifecycle_status: active
+    effective_from: 2026-01-01
+    effective_to: null
+    supersedes: []
+    superseded_by: null
+    source_authority:
+      authority_id: authority-identity-platform-owner-synthetic
+      authority_type: system_owner
+      authority_url: https://governance.example.invalid/authorities/identity-platform-owner
+    permissions:
+      classification: public_example
+      allowed_uses:
+        - architecture_reference
+        - synthetic_demo
+      denied_uses:
+        - production_compliance_attestation
+    provenance:
+      created_by: author-system-inventory-synthetic
+      created_at: 2025-12-01
+      last_reviewed_at: 2026-01-01
+      derivation: synthetic
+      source_record_url: https://governance.example.invalid/systems/identity-admin-console
+  - id: system-customer-record-platform-synthetic
+    object_type: system
+    name: Customer Record Platform
+    summary: Synthetic platform used to store regulated customer record data.
+    lifecycle_status: active
+    effective_from: 2026-01-01
+    effective_to: null
+    supersedes: []
+    superseded_by: null
+    source_authority:
+      authority_id: authority-customer-record-system-owner-synthetic
+      authority_type: system_owner
+      authority_url: https://governance.example.invalid/authorities/customer-record-system-owner
+    permissions:
+      classification: public_example
+      allowed_uses:
+        - architecture_reference
+        - synthetic_demo
+      denied_uses:
+        - production_compliance_attestation
+    provenance:
+      created_by: author-system-inventory-synthetic
+      created_at: 2025-12-01
+      last_reviewed_at: 2026-01-01
+      derivation: synthetic
+      source_record_url: https://governance.example.invalid/systems/customer-record-platform
+  - id: system-change-request-register-synthetic
+    object_type: system
+    name: Change Request Register
+    summary: Synthetic register used to track material system change approvals.
+    lifecycle_status: active
+    effective_from: 2026-01-01
+    effective_to: null
+    supersedes: []
+    superseded_by: null
+    source_authority:
+      authority_id: authority-technology-risk-owner-synthetic
+      authority_type: system_owner
+      authority_url: https://governance.example.invalid/authorities/technology-risk-owner
+    permissions:
+      classification: public_example
+      allowed_uses:
+        - architecture_reference
+        - synthetic_demo
+      denied_uses:
+        - production_compliance_attestation
+    provenance:
+      created_by: author-system-inventory-synthetic
+      created_at: 2026-01-01
+      last_reviewed_at: 2026-02-01
+      derivation: synthetic
+      source_record_url: https://governance.example.invalid/systems/change-request-register
+  - id: system-financial-reporting-platform-synthetic
+    object_type: system
+    name: Financial Reporting Platform
+    summary: Synthetic platform supporting regulated financial reporting activities.
+    lifecycle_status: active
+    effective_from: 2026-01-01
+    effective_to: null
+    supersedes: []
+    superseded_by: null
+    source_authority:
+      authority_id: authority-financial-reporting-system-owner-synthetic
+      authority_type: system_owner
+      authority_url: https://governance.example.invalid/authorities/financial-reporting-system-owner
+    permissions:
+      classification: public_example
+      allowed_uses:
+        - architecture_reference
+        - synthetic_demo
+      denied_uses:
+        - production_compliance_attestation
+    provenance:
+      created_by: author-system-inventory-synthetic
+      created_at: 2026-01-01
+      last_reviewed_at: 2026-02-01
+      derivation: synthetic
+      source_record_url: https://governance.example.invalid/systems/financial-reporting-platform
+

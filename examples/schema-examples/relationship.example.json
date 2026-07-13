@@ -1,0 +1,71 @@
+{
+  "id": "relationship-policy-control-access-review-synthetic",
+  "object_type": "relationship",
+  "title": "Synthetic Policy To Control Relationship",
+  "description": "A synthetic relationship linking an access review policy to its example control.",
+  "status": "active",
+  "version": "v1.0",
+  "effective_date": "2026-01-01",
+  "expiration_date": null,
+  "supersedes": [],
+  "authoritative_source": "Synthetic Knowledge Stewardship Group",
+  "source_uri": "https://sources.example.invalid/relationships/policy-control-access-review",
+  "owner": "owner-governance-office-synthetic",
+  "steward": "steward-knowledge-management-synthetic",
+  "jurisdiction": [
+    "jurisdiction-global-synthetic"
+  ],
+  "applicability": [
+    "capability-customer-record-management-synthetic"
+  ],
+  "classification": "public_example",
+  "access_policy": {
+    "policy_id": "access-policy-public-example-synthetic",
+    "allowed_uses": [
+      "read",
+      "validate",
+      "transform",
+      "publish_example"
+    ],
+    "denied_uses": [
+      "production_decisioning"
+    ],
+    "handling_notes": "Synthetic relationship example only."
+  },
+  "provenance": {
+    "created_by": "author-public-reference-synthetic",
+    "created_date": "2026-01-01",
+    "method": "synthetic_authoring",
+    "change_summary": "Initial synthetic relationship example."
+  },
+  "last_reviewed_date": "2026-06-30",
+  "related_objects": [
+    {
+      "id": "policy-access-review-synthetic",
+      "relationship_type": "references"
+    },
+    {
+      "id": "control-quarterly-access-review-synthetic",
+      "relationship_type": "references"
+    }
+  ],
+  "assertions": [
+    {
+      "assertion_id": "assertion-policy-requires-control-synthetic",
+      "predicate": "requires control",
+      "object": "control-quarterly-access-review-synthetic",
+      "confidence": "declared"
+    }
+  ],
+  "evidence": [
+    {
+      "evidence_id": "evidence-policy-control-mapping-synthetic",
+      "summary": "Synthetic mapping note that explains why the policy and control are connected.",
+      "uri": "https://sources.example.invalid/evidence/policy-control-mapping"
+    }
+  ],
+  "relationship_type": "requires_control",
+  "from_object": "policy-access-review-synthetic",
+  "to_object": "control-quarterly-access-review-synthetic",
+  "rationale": "The synthetic policy obligation is implemented by the quarterly access review control."
+}

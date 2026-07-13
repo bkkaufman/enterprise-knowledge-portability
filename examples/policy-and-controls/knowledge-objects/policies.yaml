@@ -1,0 +1,82 @@
+records:
+  - id: policy-access-review-v2-synthetic
+    object_type: policy
+    policy_id: policy-access-review-v2-synthetic
+    name: Quarterly Access Review Policy
+    summary: Requires quarterly review of privileged and business-critical system access for Synthetic Regulated Company.
+    lifecycle_status: active
+    effective_from: 2026-01-01
+    effective_to: null
+    supersedes:
+      - policy-access-review-v1-synthetic
+    superseded_by: null
+    policy_category: identity-and-access
+    jurisdictions:
+      - jurisdiction-example-north-synthetic
+      - jurisdiction-example-union-synthetic
+    business_capabilities:
+      - capability-customer-record-management-synthetic
+      - capability-financial-reporting-synthetic
+    obligations:
+      - obligation_id: obligation-access-review-quarterly-synthetic
+        statement: Privileged and business-critical access must be reviewed at least quarterly by an accountable owner.
+      - obligation_id: obligation-access-review-evidence-synthetic
+        statement: Review completion, exceptions, and approvals must be retained as review evidence.
+    source_authority:
+      authority_id: authority-policy-standards-board-synthetic
+      authority_type: board
+      authority_url: https://governance.example.invalid/authorities/policy-standards-board
+    permissions:
+      classification: public_example
+      allowed_uses:
+        - architecture_reference
+        - schema_validation
+        - synthetic_demo
+      denied_uses:
+        - production_compliance_attestation
+    provenance:
+      created_by: author-policy-office-synthetic
+      created_at: 2025-11-15
+      last_reviewed_at: 2026-01-01
+      derivation: synthetic
+      source_record_url: https://governance.example.invalid/policies/policy-access-review-v2-synthetic
+  - id: policy-change-approval-v1-synthetic
+    object_type: policy
+    policy_id: policy-change-approval-v1-synthetic
+    name: Material System Change Approval Policy
+    summary: Requires review and approval before material changes to regulated business systems are implemented.
+    lifecycle_status: active
+    effective_from: 2026-02-01
+    effective_to: null
+    supersedes: []
+    superseded_by: null
+    policy_category: technology-risk
+    jurisdictions:
+      - jurisdiction-example-north-synthetic
+    business_capabilities:
+      - capability-financial-reporting-synthetic
+      - capability-customer-record-management-synthetic
+    obligations:
+      - obligation_id: obligation-change-approval-material-synthetic
+        statement: Material changes to regulated business systems must be approved by a system owner before implementation.
+      - obligation_id: obligation-change-approval-trace-synthetic
+        statement: Approval evidence must identify the change request, approving owner, impacted system, and implementation date.
+    source_authority:
+      authority_id: authority-policy-standards-board-synthetic
+      authority_type: board
+      authority_url: https://governance.example.invalid/authorities/policy-standards-board
+    permissions:
+      classification: public_example
+      allowed_uses:
+        - architecture_reference
+        - schema_validation
+        - synthetic_demo
+      denied_uses:
+        - production_compliance_attestation
+    provenance:
+      created_by: author-policy-office-synthetic
+      created_at: 2026-01-05
+      last_reviewed_at: 2026-02-01
+      derivation: synthetic
+      source_record_url: https://governance.example.invalid/policies/policy-change-approval-v1-synthetic
+
