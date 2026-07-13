@@ -6,7 +6,7 @@ The schemas use JSON Schema Draft 2020-12 and keep the common portable record en
 
 Every knowledge object can carry stable identity, object type, title, description, status, version, dates, supersession, source authority, ownership, stewardship, jurisdiction, applicability, classification, access policy, provenance, review date, related objects, machine-readable assertions, and human-readable evidence.
 
-The common schema intentionally uses plain strings, arrays, and small objects. It validates record shape, controlled values, dates, public example URIs, and synthetic identifier format. It does not define enterprise semantics, legal meaning, control effectiveness, ontology reasoning, or downstream runtime behavior.
+The common schema intentionally uses plain strings, arrays, and small objects. It validates record shape, controlled values, dates, public example URI references, and synthetic identifier format. It does not define enterprise semantics, legal meaning, control effectiveness, ontology reasoning, or downstream runtime behavior.
 
 ## Composition
 
@@ -14,7 +14,7 @@ The common schema intentionally uses plain strings, arrays, and small objects. I
 
 ## Public Example Boundary
 
-The schemas require synthetic identifiers ending in `-synthetic` and source or evidence URIs under `example.invalid`. This keeps the public reference examples clearly synthetic. A private implementation would normally relax those patterns and map identifiers to its own governed namespace.
+The schemas require synthetic identifiers ending in `-synthetic` and source or evidence URI references that are either repository-relative artifacts or HTTPS `example.invalid` placeholders. This keeps the public reference examples clearly synthetic while allowing the primary OKF worked example to point at inspectable files in the repository. A private implementation would normally relax those patterns and map identifiers to its own governed namespace or authoritative source-system URLs.
 
 ## Examples
 

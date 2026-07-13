@@ -9,7 +9,7 @@
   "expiration_date": null,
   "supersedes": [],
   "authoritative_source": "Synthetic Knowledge Stewardship Group",
-  "source_uri": "https://sources.example.invalid/relationships/policy-control-access-review",
+  "source_uri": "../../mappings/okf/bundle/sources/policy-control-mapping-source.md",
   "owner": "owner-governance-office-synthetic",
   "steward": "steward-knowledge-management-synthetic",
   "jurisdiction": [
@@ -61,7 +61,7 @@
     {
       "evidence_id": "evidence-policy-control-mapping-synthetic",
       "summary": "Synthetic mapping note that explains why the policy and control are connected.",
-      "uri": "https://sources.example.invalid/evidence/policy-control-mapping"
+      "uri": "../../mappings/okf/bundle/sources/policy-control-mapping-source.md#mapping-evidence"
     }
   ],
   "relationship_type": "requires_control",

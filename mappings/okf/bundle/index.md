@@ -8,3 +8,7 @@ okf_version: "0.1"
 # Controls
 
 - [Synthetic Quarterly Access Review Control](controls/control-quarterly-access-review-synthetic.md)
+
+# Sources
+
+- [Synthetic source artifacts](sources/)

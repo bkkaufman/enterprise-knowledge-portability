@@ -16,7 +16,7 @@ This table maps the canonical JSON source objects at [../../examples/schema-exam
 | `expiration_date` | Body section `# Lifecycle` | Partial mapping | OKF has no standard expiration date field. |
 | `supersedes` | Body section `# Lifecycle` | Partial mapping | OKF links can express relationships in prose, but OKF v0.1 links are untyped edges. |
 | `authoritative_source` | Body section `# Authority` | Partial mapping | OKF citations can point to sources, but OKF v0.1 does not define source authority semantics. |
-| `source_uri` | Frontmatter `resource` and body section `# Authority` | Direct mapping | `resource` is the OKF field for the canonical URI of the underlying asset. |
+| `source_uri` | Frontmatter `resource` and body section `# Authority` | Direct mapping | `resource` is the OKF field for the underlying asset URI. The worked example uses repository-relative URI references to inspectable source artifacts; production bundles could use authoritative absolute URIs. |
 | `owner` | Body section `# Governance` | Partial mapping | OKF v0.1 has no standard owner field. |
 | `steward` | Body section `# Governance` | Partial mapping | OKF v0.1 has no standard steward field. |
 | `jurisdiction` | Body section `# Governance` | Partial mapping | OKF v0.1 has no standard jurisdiction field. |

@@ -87,9 +87,7 @@
       "minLength": 1
     },
     "source_uri": {
-      "type": "string",
-      "format": "uri",
-      "pattern": "^https://[a-z0-9.-]+\\.example\\.invalid(/.*)?$"
+      "$ref": "#/$defs/syntheticUriReference"
     },
     "owner": {
       "$ref": "#/$defs/syntheticId"
@@ -160,6 +158,11 @@
         "null"
       ],
       "format": "date"
+    },
+    "syntheticUriReference": {
+      "type": "string",
+      "format": "uri-reference",
+      "pattern": "^(https://[a-z0-9.-]+\\.example\\.invalid(/.*)?|(?:\\.\\.?/)+[A-Za-z0-9._~!$&'()*+,;=:@%/-]+(?:#[A-Za-z0-9._~!$&'()*+,;=:@%/?-]+)?)$"
     },
     "relatedObject": {
       "type": "object",
@@ -308,9 +311,7 @@
           "minLength": 1
         },
         "uri": {
-          "type": "string",
-          "format": "uri",
-          "pattern": "^https://[a-z0-9.-]+\\.example\\.invalid(/.*)?$"
+          "$ref": "#/$defs/syntheticUriReference"
         }
       },
       "additionalProperties": false

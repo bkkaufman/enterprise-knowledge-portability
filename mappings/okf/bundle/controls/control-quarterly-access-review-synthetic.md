@@ -2,79 +2,61 @@
 type: Control
 title: Synthetic Quarterly Access Review Control
 description: A synthetic control for reviewing access to an example customer directory system.
-resource: https://sources.example.invalid/controls/quarterly-access-review
+resource: ../sources/quarterly-access-review-control-source.md
 ---
 # Source Object
 
-Canonical JSON source object: [control.example.json](../../../../examples/schema-examples/control.example.json).
-
-Stable identifier: `control-quarterly-access-review-synthetic`.
-
-Object type: `control`.
+| Field | Value |
+| --- | --- |
+| Canonical JSON source object | [control.example.json](../../../../examples/schema-examples/control.example.json) |
+| Stable identifier | `control-quarterly-access-review-synthetic` |
+| Object type | `control` |
 
 # Authority
 
-Authoritative source: Synthetic Control Library.
-
-Source URI: https://sources.example.invalid/controls/quarterly-access-review.
+| Field | Value |
+| --- | --- |
+| Authoritative source | Synthetic Control Library |
+| Source artifact | [quarterly-access-review-control-source.md](../sources/quarterly-access-review-control-source.md) |
 
 # Lifecycle
 
-Status: `active`.
-
-Version: `v1.0`.
-
-Effective date: `2026-01-01`.
-
-Expiration date: `null`.
-
-Supersedes: none.
+| Field | Value |
+| --- | --- |
+| Status | `active` |
+| Version | `v1.0` |
+| Effective date | `2026-01-01` |
+| Expiration date | `null` |
+| Supersedes | none |
 
 # Governance
 
-Owner: `owner-access-operations-synthetic`.
-
-Steward: `steward-access-governance-synthetic`.
-
-Jurisdiction:
-
-* `jurisdiction-global-synthetic`
-
-Applicability:
-
-* `capability-customer-record-management-synthetic`
-* `system-customer-directory-synthetic`
+| Field | Value |
+| --- | --- |
+| Owner | `owner-access-operations-synthetic` |
+| Steward | `steward-access-governance-synthetic` |
+| Jurisdiction | `jurisdiction-global-synthetic` |
+| Applicability | `capability-customer-record-management-synthetic`<br>`system-customer-directory-synthetic` |
 
 # Permissions
 
-Classification: `public_example`.
-
-Access policy: `access-policy-public-example-synthetic`.
-
-Allowed uses:
-
-* `read`
-* `validate`
-* `transform`
-* `publish_example`
-
-Denied uses:
-
-* `production_decisioning`
-
-Handling notes: Synthetic control example. Do not use as a production control.
+| Field | Value |
+| --- | --- |
+| Classification | `public_example` |
+| Access policy | `access-policy-public-example-synthetic` |
+| Allowed uses | `read`<br>`validate`<br>`transform`<br>`publish_example` |
+| Denied uses | `production_decisioning` |
+| Handling notes | Synthetic control example. Do not use as a production control. |
 
 # Provenance
 
-Created by: `author-public-reference-synthetic`.
-
-Created date: `2026-01-01`.
-
-Method: `synthetic_authoring`.
-
-Change summary: Initial synthetic control example.
-
-Last reviewed date: `2026-06-30`.
+| Field | Value |
+| --- | --- |
+| Created by | `author-public-reference-synthetic` |
+| Created date | `2026-01-01` |
+| Method | `synthetic_authoring` |
+| Change summary | Initial synthetic control example. |
+| Last reviewed date | `2026-06-30` |
 
 # Relationships
 
@@ -84,7 +66,7 @@ The related policy is represented in the source object as a typed relationship. 
 
 # Incoming Relationships
 
-| Relationship | Source |
+| Relationship | Source object |
 | --- | --- |
 | Required by | [Synthetic Access Review Policy](../policies/policy-access-review-synthetic.md) |
 
@@ -98,27 +80,20 @@ This incoming relationship is derived from the policy record's canonical `requir
 
 # Evidence
 
-| Evidence ID | Summary | URI |
+| Evidence ID | Summary | Source artifact |
 | --- | --- | --- |
-| `evidence-access-review-sample-synthetic` | Synthetic evidence checklist showing the expected access review artifacts. | https://sources.example.invalid/evidence/access-review-sample |
+| `evidence-access-review-sample-synthetic` | Synthetic evidence checklist showing the expected access review artifacts. | [quarterly-access-review-evidence.json](../sources/quarterly-access-review-evidence.json) |
 
 # Control Content
 
-Control category: `access_review`.
-
-Control objective: Confirm that access to the synthetic customer directory remains appropriate.
-
-Control type: `detective`.
-
-Operating frequency: `quarterly`.
-
-Systems:
-
-* `system-customer-directory-synthetic`
-
-Mapped obligations:
-
-* `obligation-quarterly-access-review-synthetic`
+| Field | Value |
+| --- | --- |
+| Control category | `access_review` |
+| Control objective | Confirm that access to the synthetic customer directory remains appropriate. |
+| Control type | `detective` |
+| Operating frequency | `quarterly` |
+| Systems | `system-customer-directory-synthetic` |
+| Mapped obligations | `obligation-quarterly-access-review-synthetic` |
 
 # Evidence Expectations
 
@@ -134,6 +109,6 @@ The frontmatter uses only OKF v0.1 standard fields: `type`, `title`, `descriptio
 
 [1] [Canonical JSON control source](../../../../examples/schema-examples/control.example.json)
 
-[2] [Synthetic source URI](https://sources.example.invalid/controls/quarterly-access-review)
+[2] [Synthetic source artifact](../sources/quarterly-access-review-control-source.md)
 
-[3] [Synthetic evidence URI](https://sources.example.invalid/evidence/access-review-sample)
+[3] [Synthetic evidence artifact](../sources/quarterly-access-review-evidence.json)

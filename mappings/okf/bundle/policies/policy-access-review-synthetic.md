@@ -2,77 +2,61 @@
 type: Policy
 title: Synthetic Access Review Policy
 description: A synthetic policy requiring periodic review of access to example business systems.
-resource: https://sources.example.invalid/policies/access-review
+resource: ../sources/access-review-policy-source.md
 ---
 # Source Object
 
-Canonical JSON source object: [policy.example.json](../../../../examples/schema-examples/policy.example.json).
-
-Stable identifier: `policy-access-review-synthetic`.
-
-Object type: `policy`.
+| Field | Value |
+| --- | --- |
+| Canonical JSON source object | [policy.example.json](../../../../examples/schema-examples/policy.example.json) |
+| Stable identifier | `policy-access-review-synthetic` |
+| Object type | `policy` |
 
 # Authority
 
-Authoritative source: Synthetic Policy Committee.
-
-Source URI: https://sources.example.invalid/policies/access-review.
+| Field | Value |
+| --- | --- |
+| Authoritative source | Synthetic Policy Committee |
+| Source artifact | [access-review-policy-source.md](../sources/access-review-policy-source.md) |
 
 # Lifecycle
 
-Status: `active`.
-
-Version: `v1.0`.
-
-Effective date: `2026-01-01`.
-
-Expiration date: `null`.
-
-Supersedes: none.
+| Field | Value |
+| --- | --- |
+| Status | `active` |
+| Version | `v1.0` |
+| Effective date | `2026-01-01` |
+| Expiration date | `null` |
+| Supersedes | none |
 
 # Governance
 
-Owner: `owner-governance-office-synthetic`.
-
-Steward: `steward-access-governance-synthetic`.
-
-Jurisdiction: `jurisdiction-global-synthetic`.
-
-Applicability:
-
-* `capability-customer-record-management-synthetic`
-* `system-customer-directory-synthetic`
+| Field | Value |
+| --- | --- |
+| Owner | `owner-governance-office-synthetic` |
+| Steward | `steward-access-governance-synthetic` |
+| Jurisdiction | `jurisdiction-global-synthetic` |
+| Applicability | `capability-customer-record-management-synthetic`<br>`system-customer-directory-synthetic` |
 
 # Permissions
 
-Classification: `public_example`.
-
-Access policy: `access-policy-public-example-synthetic`.
-
-Allowed uses:
-
-* `read`
-* `validate`
-* `transform`
-* `publish_example`
-
-Denied uses:
-
-* `production_decisioning`
-
-Handling notes: Synthetic public reference policy. Do not treat as operating guidance.
+| Field | Value |
+| --- | --- |
+| Classification | `public_example` |
+| Access policy | `access-policy-public-example-synthetic` |
+| Allowed uses | `read`<br>`validate`<br>`transform`<br>`publish_example` |
+| Denied uses | `production_decisioning` |
+| Handling notes | Synthetic public reference policy. Do not treat as operating guidance. |
 
 # Provenance
 
-Created by: `author-public-reference-synthetic`.
-
-Created date: `2026-01-01`.
-
-Method: `synthetic_authoring`.
-
-Change summary: Initial synthetic policy example.
-
-Last reviewed date: `2026-06-30`.
+| Field | Value |
+| --- | --- |
+| Created by | `author-public-reference-synthetic` |
+| Created date | `2026-01-01` |
+| Method | `synthetic_authoring` |
+| Change summary | Initial synthetic policy example. |
+| Last reviewed date | `2026-06-30` |
 
 # Relationships
 
@@ -88,9 +72,9 @@ The related control is represented in the source object as a typed relationship.
 
 # Evidence
 
-| Evidence ID | Summary | URI |
+| Evidence ID | Summary | Source artifact |
 | --- | --- | --- |
-| `evidence-access-review-policy-summary-synthetic` | Synthetic policy approval note for the example record. | https://sources.example.invalid/evidence/access-review-policy-summary |
+| `evidence-access-review-policy-summary-synthetic` | Synthetic policy approval note for the example record. | [access-review-policy-source.md](../sources/access-review-policy-source.md#synthetic-approval-note) |
 
 # Policy Content
 
@@ -114,6 +98,6 @@ The frontmatter uses only OKF v0.1 standard fields: `type`, `title`, `descriptio
 
 [1] [Canonical JSON policy source](../../../../examples/schema-examples/policy.example.json)
 
-[2] [Synthetic source URI](https://sources.example.invalid/policies/access-review)
+[2] [Synthetic source artifact](../sources/access-review-policy-source.md)
 
-[3] [Synthetic evidence URI](https://sources.example.invalid/evidence/access-review-policy-summary)
+[3] [Synthetic evidence artifact](../sources/access-review-policy-source.md#synthetic-approval-note)

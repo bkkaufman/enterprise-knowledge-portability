@@ -14,7 +14,7 @@ This page shows how the same policy object can be projected into human-readable 
 | Expiration date | None |
 | Supersedes | None |
 | Authoritative source | Synthetic Policy Committee |
-| Source URI | `https://sources.example.invalid/policies/access-review` |
+| Source artifact | [access-review-policy-source.md](okf/bundle/sources/access-review-policy-source.md) |
 | Owner | `owner-governance-office-synthetic` |
 | Steward | `steward-access-governance-synthetic` |
 | Jurisdiction | `jurisdiction-global-synthetic` |
@@ -56,7 +56,7 @@ Change summary: Initial synthetic policy example.
 
 `evidence-access-review-policy-summary-synthetic`: Synthetic policy approval note for the example record.
 
-URI: `https://sources.example.invalid/evidence/access-review-policy-summary`
+Source artifact: [access-review-policy-source.md](okf/bundle/sources/access-review-policy-source.md#synthetic-approval-note)
 
 ### Related Objects
 

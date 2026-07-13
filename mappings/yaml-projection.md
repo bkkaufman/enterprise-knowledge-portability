@@ -13,7 +13,7 @@ effective_date: 2026-01-01
 expiration_date: null
 supersedes: []
 authoritative_source: Synthetic Policy Committee
-source_uri: https://sources.example.invalid/policies/access-review
+source_uri: ../../mappings/okf/bundle/sources/access-review-policy-source.md
 owner: owner-governance-office-synthetic
 steward: steward-access-governance-synthetic
 jurisdiction:
@@ -49,7 +49,7 @@ assertions:
 evidence:
   - evidence_id: evidence-access-review-policy-summary-synthetic
     summary: Synthetic policy approval note for the example record.
-    uri: https://sources.example.invalid/evidence/access-review-policy-summary
+    uri: ../../mappings/okf/bundle/sources/access-review-policy-source.md#synthetic-approval-note
 policy_category: access_management
 policy_statement: Access to synthetic customer record systems must be reviewed on a recurring schedule.
 obligations:

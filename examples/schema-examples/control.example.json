@@ -9,7 +9,7 @@
   "expiration_date": null,
   "supersedes": [],
   "authoritative_source": "Synthetic Control Library",
-  "source_uri": "https://sources.example.invalid/controls/quarterly-access-review",
+  "source_uri": "../../mappings/okf/bundle/sources/quarterly-access-review-control-source.md",
   "owner": "owner-access-operations-synthetic",
   "steward": "steward-access-governance-synthetic",
   "jurisdiction": [
@@ -58,7 +58,7 @@
     {
       "evidence_id": "evidence-access-review-sample-synthetic",
       "summary": "Synthetic evidence checklist showing the expected access review artifacts.",
-      "uri": "https://sources.example.invalid/evidence/access-review-sample"
+      "uri": "../../mappings/okf/bundle/sources/quarterly-access-review-evidence.json"
     }
   ],
   "control_category": "access_review",

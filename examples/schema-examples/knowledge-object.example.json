@@ -9,7 +9,7 @@
   "expiration_date": null,
   "supersedes": [],
   "authoritative_source": "Synthetic Governance Office",
-  "source_uri": "https://sources.example.invalid/knowledge/access-standard",
+  "source_uri": "../../mappings/okf/bundle/sources/access-standard-source.md",
   "owner": "owner-governance-office-synthetic",
   "steward": "steward-knowledge-management-synthetic",
   "jurisdiction": [
@@ -57,7 +57,7 @@
     {
       "evidence_id": "evidence-access-standard-summary-synthetic",
       "summary": "Synthetic summary showing why the record is authoritative for the example.",
-      "uri": "https://sources.example.invalid/evidence/access-standard-summary"
+      "uri": "../../mappings/okf/bundle/sources/access-standard-source.md#summary"
     }
   ]
 }

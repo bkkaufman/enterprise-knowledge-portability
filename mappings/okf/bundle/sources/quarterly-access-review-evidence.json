@@ -1,0 +1,15 @@
+{
+  "artifact_type": "fictional_demonstration_evidence",
+  "title": "Synthetic Quarterly Access Review Evidence",
+  "description": "Fictional evidence artifact supporting the synthetic quarterly access review control example.",
+  "review_period": "2026-Q2",
+  "reviewed_system": "system-customer-directory-synthetic",
+  "completion_date": "2026-06-30",
+  "evidence_items": [
+    "access_population",
+    "reviewer_attestation",
+    "exception_approval_log",
+    "completion_record"
+  ],
+  "demo_only": true
+}

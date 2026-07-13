@@ -1,6 +1,6 @@
 # OKF Alignment Notes
 
-This note compares the repository's concepts with the public direction represented by Google's Open Knowledge Format. The worked example at [okf/README.md](okf/README.md) maps one canonical JSON policy object into an OKF v0.1 Draft bundle without changing the repository's canonical JSON schemas.
+This note compares the repository's concepts with the public direction represented by Google's Open Knowledge Format. The worked example at [okf/README.md](okf/README.md) maps canonical JSON policy and control objects into an OKF v0.1 Draft bundle while keeping the canonical JSON model as the source of truth.
 
 ## Comparison Levels
 
@@ -16,7 +16,7 @@ This note compares the repository's concepts with the public direction represent
 | Repository Concept | Alignment Level | Notes |
 | --- | --- | --- |
 | Title and description | Direct mapping | OKF v0.1 defines `title` and `description` frontmatter fields. The worked example copies these values from the canonical JSON source object. |
-| Source URI | Direct mapping | OKF v0.1 defines `resource` as the canonical URI for the underlying asset. The worked example maps `source_uri` to `resource`. |
+| Source URI reference | Direct mapping | OKF v0.1 defines `resource` as the URI for the underlying asset. The worked example maps `source_uri` to `resource` and uses repository-relative source artifacts so the example is inspectable. |
 | Stable knowledge object identity | Partial mapping | OKF v0.1 defines the concept ID as the markdown file path without `.md`. The worked example uses the source ID in the concept path and body, but OKF v0.1 does not define a standard `id` frontmatter field. |
 | Object type | Partial mapping | OKF v0.1 requires `type`, but type values are producer selected and not centrally registered. |
 | Authority and source | Partial mapping | OKF citations can cite sources, but OKF v0.1 does not define source authority semantics. |

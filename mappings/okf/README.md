@@ -19,12 +19,17 @@ The OKF example is a projection, not a replacement for the repository's canonica
 - [bundle/index.md](bundle/index.md) is the root index for the OKF v0.1 bundle.
 - [bundle/policies/policy-access-review-synthetic.md](bundle/policies/policy-access-review-synthetic.md) is the OKF concept document derived from the canonical JSON source object.
 - [bundle/controls/control-quarterly-access-review-synthetic.md](bundle/controls/control-quarterly-access-review-synthetic.md) is the OKF control concept document derived from the canonical JSON control source object.
+- [bundle/sources/](bundle/sources/) contains fictional source and evidence artifacts that make the worked example self-contained and inspectable.
 
 ## Relationship And Backlink Example
 
 The policy links to the control it requires. The control links to the policy it implements. The control also displays the policy as an incoming relationship.
 
 The incoming relationship is derived from the canonical source records. OKF v0.1 supplies the Markdown bundle structure, but it does not define a standard backlink field or typed relationship model. The backlink display is a repository convention for making canonical relationships easier to navigate.
+
+These policy/control links are relationships between knowledge objects. They are separate from provenance and evidence references, which point to supporting source artifacts in [bundle/sources/](bundle/sources/).
+
+The source artifacts are fictional demonstration files included so readers can inspect the supporting material without following intentionally non-resolving placeholder URLs. A production bundle could instead point `resource`, `source_uri`, and evidence references at authoritative absolute URIs owned by the source system.
 
 ## Conformance Boundary
 

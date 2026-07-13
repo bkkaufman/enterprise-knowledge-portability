@@ -117,7 +117,7 @@ Enterprise knowledge also needs information that a personal knowledge system may
 
 This repository includes a concrete **Open Knowledge Format** implementation.
 
-The example projects the existing canonical JSON policy record into an OKF v0.1 Draft bundle. The bundle contains an `index.md` file and a Markdown knowledge concept with YAML frontmatter.
+The example projects the existing canonical JSON policy and control records into an OKF v0.1 Draft bundle. The bundle contains an `index.md` file and Markdown knowledge concepts with YAML frontmatter.
 
 A minimal OKF concept in this repository looks like this:
 
@@ -126,11 +126,13 @@ A minimal OKF concept in this repository looks like this:
 type: Policy
 title: Synthetic Access Review Policy
 description: A synthetic policy requiring periodic review of access to example business systems.
-resource: https://sources.example.invalid/policies/access-review
+resource: ../sources/access-review-policy-source.md
 ---
 ```
 
 The remaining authority, lifecycle, permissions, provenance, relationships, assertions, evidence, and obligations appear in the Markdown body. OKF v0.1 does not define standard frontmatter fields for all of those concepts.
+
+The OKF worked example is self-contained: provenance and evidence references point to fictional source artifacts in the repository, while policy/control relationships use repository-relative Markdown links between OKF concepts. Production bundles could use authoritative absolute URIs instead.
 
 Explore the example:
 
@@ -144,13 +146,13 @@ Explore the example:
 
 The bundle also shows a relationship in both directions: the policy links to the control it requires, and the [control displays the policy as an incoming relationship](mappings/okf/bundle/controls/control-quarterly-access-review-synthetic.md#incoming-relationships).
 
-The OKF representation is a projection of the canonical knowledge object. It demonstrates how OKF can carry portable knowledge while also making clear which governance semantics map directly, which map partially, and which remain outside the current OKF specification.
+The OKF representation is a projection of the canonical knowledge objects. It demonstrates how OKF can carry portable knowledge while also making clear which governance semantics map directly, which map partially, and which remain outside the current OKF specification.
 
 ## Vendor Neutral And Synthetic
 
 This repository is vendor neutral. It does not depend on any AI provider, model provider, cloud provider, application vendor, vector database, graph database, workflow system, or agent framework.
 
-All examples are synthetic. The fictional company, records, identifiers, systems, authorities, jurisdictions, and URLs are public examples only. URLs use `example.invalid`. The examples are not production systems and do not represent a real organization.
+All examples are synthetic. The fictional company, records, identifiers, systems, authorities, jurisdictions, source artifacts, and URLs are public examples only. The examples are not production systems and do not represent a real organization.
 
 ## Enterprise AI Architecture Notes
 
