@@ -103,6 +103,16 @@ Markdown is useful for human-readable explanation. YAML and JSON are useful for 
 
 The pattern in this repository is to define durable knowledge records first, then adapt them to the format or runtime needed for a specific implementation.
 
+## Relationship To Second Brain And Wiki-Style Knowledge Systems
+
+This repository shares some of the thinking behind Andrej Karpathy’s second brain work and concepts. Knowledge is more usable when it is maintained as readable, linked pages that people and software can navigate through.
+
+The same approach is useful inside an enterprise. Policies, controls, systems, owners, evidence, and decisions can each have a persistent page, with links showing how they relate to one another. This gives people and AI systems a clearer structure than a collection of document fragments stored in separate retrieval indexes.
+
+Enterprise knowledge also needs information that a personal knowledge system may not require. Each record may need an authoritative source, ownership, permissions, effective dates, provenance, and a defined lifecycle. Relationships also need clear meaning. A policy may require a control, a control may implement a policy, and a newer record may supersede an earlier one.
+
+**Backlinks** make these relationships visible from both directions. A policy page can point to the control required, while the control page can show every policy that depends on it. The canonical relationship record remains the source, and the readable pages expose that structure in a form that people and AI systems can follow.
+
 ## Open Knowledge Format Example
 
 This repository includes a concrete **Open Knowledge Format** implementation.
