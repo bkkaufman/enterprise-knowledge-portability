@@ -113,4 +113,4 @@ All examples are synthetic. The fictional company, records, identifiers, systems
 
 ## License
 
-Copyright © 2025–2026 Brad Kaufman. All rights reserved.
+Copyright © 2026 Brad Kaufman. All rights reserved.
