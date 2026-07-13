@@ -30,6 +30,7 @@ Use `example.invalid` for hostnames.
 - Do not create commits unless explicitly instructed.
 - Do not push branches or tags unless explicitly instructed.
 - Never add `Co-authored-by`, `Generated-by`, `Assisted-by`, or similar attribution trailers.
+- Never add automated-tool attribution or co-author trailers to commits.
 - Never list an AI model or automated tool as an author, committer, contributor, reviewer, or maintainer.
 - Commit authorship must use the human operator's configured Git identity.
 - Do not modify Git author or committer settings.
