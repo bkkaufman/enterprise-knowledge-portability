@@ -4,6 +4,8 @@ Enterprise knowledge should remain understandable, authoritative, and reusable w
 
 This repository is a public reference implementation for structuring enterprise knowledge outside any single AI model, application database, retrieval index, workflow engine, or vendor-specific agent memory system.
 
+The repository also includes an [Open Knowledge Format example](mappings/okf/README.md), showing how the same portable policy record can be represented as an OKF v0.1 Draft bundle without making OKF the canonical source model.
+
 ## The Enterprise Problem
 
 Enterprises often encode important operating knowledge in places that are hard to move: policy portals, control libraries, ticket workflows, application tables, knowledge bases, retrieval indexes, prompts, and agent memory stores. When the organization changes models, vendors, applications, or workflows, that knowledge can lose context, authority, provenance, permissions, effective dates, and relationships to the controls or systems that make it operational.
@@ -101,13 +103,38 @@ Markdown is useful for human-readable explanation. YAML and JSON are useful for 
 
 The pattern in this repository is to define durable knowledge records first, then adapt them to the format or runtime needed for a specific implementation.
 
-## Open Knowledge Format example
+## Open Knowledge Format Example
 
-The worked [Open Knowledge Format mapping](mappings/okf/README.md) projects the existing canonical JSON policy object into an OKF v0.1 Draft bundle. It documents which fields map directly, which fields map partially, and which semantics OKF v0.1 does not represent.
+This repository includes a concrete **Open Knowledge Format** implementation.
 
-## Vendor-Neutral And Synthetic
+The example projects the existing canonical JSON policy record into an OKF v0.1 Draft bundle. The bundle contains an `index.md` file and a Markdown knowledge concept with YAML frontmatter.
 
-This repository is vendor-neutral. It does not depend on any AI provider, model provider, cloud provider, application vendor, vector database, graph database, workflow system, or agent framework.
+A minimal OKF concept in this repository looks like this:
+
+```yaml
+---
+type: Policy
+title: Synthetic Access Review Policy
+description: A synthetic policy requiring periodic review of access to example business systems.
+resource: https://sources.example.invalid/policies/access-review
+---
+```
+
+The remaining authority, lifecycle, permissions, provenance, relationships, assertions, evidence, and obligations appear in the Markdown body. OKF v0.1 does not define standard frontmatter fields for all of those concepts.
+
+Explore the example:
+
+- [OKF mapping overview](mappings/okf/README.md)
+- [OKF bundle index](mappings/okf/bundle/index.md)
+- [OKF policy concept](mappings/okf/bundle/policies/policy-access-review-synthetic.md)
+- [Field mapping table](mappings/okf/mapping-table.md)
+- [Canonical JSON source object](examples/schema-examples/policy.example.json)
+
+The OKF representation is a projection of the canonical knowledge object. It demonstrates how OKF can carry portable knowledge while also making clear which governance semantics map directly, which map partially, and which remain outside the current OKF specification.
+
+## Vendor Neutral And Synthetic
+
+This repository is vendor neutral. It does not depend on any AI provider, model provider, cloud provider, application vendor, vector database, graph database, workflow system, or agent framework.
 
 All examples are synthetic. The fictional company, records, identifiers, systems, authorities, jurisdictions, and URLs are public examples only. URLs use `example.invalid`. The examples are not production systems and do not represent a real organization.
 
