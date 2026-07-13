@@ -110,3 +110,7 @@ All examples are synthetic. The fictional company, records, identifiers, systems
 ## Enterprise AI Architecture Notes
 
 - [Enterprise AI Architecture Notes](https://notes.example.invalid/enterprise-ai-architecture) provides companion architecture notes for related enterprise AI design topics.
+
+## License
+
+Copyright © 2025–2026 Brad Kaufman. All rights reserved.
