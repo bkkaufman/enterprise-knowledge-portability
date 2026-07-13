@@ -101,6 +101,10 @@ Markdown is useful for human-readable explanation. YAML and JSON are useful for 
 
 The pattern in this repository is to define durable knowledge records first, then adapt them to the format or runtime needed for a specific implementation.
 
+## Open Knowledge Format example
+
+The worked [Open Knowledge Format mapping](mappings/okf/README.md) projects the existing canonical JSON policy object into an OKF v0.1 Draft bundle. It documents which fields map directly, which fields map partially, and which semantics OKF v0.1 does not represent.
+
 ## Vendor-Neutral And Synthetic
 
 This repository is vendor-neutral. It does not depend on any AI provider, model provider, cloud provider, application vendor, vector database, graph database, workflow system, or agent framework.
