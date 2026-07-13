@@ -8,7 +8,7 @@ This repository is a public reference implementation for structuring enterprise 
 
 Enterprises often encode important operating knowledge in places that are hard to move: policy portals, control libraries, ticket workflows, application tables, knowledge bases, retrieval indexes, prompts, and agent memory stores. When the organization changes models, vendors, applications, or workflows, that knowledge can lose context, authority, provenance, permissions, effective dates, and relationships to the controls or systems that make it operational.
 
-The result is not only migration cost. It is ambiguity about which records are authoritative, which version applies, what a record depends on, who owns it, what evidence supports it, and whether a downstream AI or automation system is allowed to use it.
+This migration cost often comes with a deeper operational problem: teams can no longer tell which records are authoritative, which version applies, what a record depends on, who owns it, what evidence supports it, or whether a downstream AI or automation system is allowed to use it.
 
 ## What Portability Means Here
 
