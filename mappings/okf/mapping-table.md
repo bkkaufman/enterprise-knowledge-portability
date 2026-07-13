@@ -1,6 +1,6 @@
 # OKF Mapping Table
 
-This table maps the canonical JSON source object at [../../examples/schema-examples/policy.example.json](../../examples/schema-examples/policy.example.json) to the OKF v0.1 Draft concept document at [bundle/policies/policy-access-review-synthetic.md](bundle/policies/policy-access-review-synthetic.md).
+This table maps the canonical JSON source objects at [../../examples/schema-examples/policy.example.json](../../examples/schema-examples/policy.example.json) and [../../examples/schema-examples/control.example.json](../../examples/schema-examples/control.example.json) to the OKF v0.1 Draft concept documents in [bundle/policies/policy-access-review-synthetic.md](bundle/policies/policy-access-review-synthetic.md) and [bundle/controls/control-quarterly-access-review-synthetic.md](bundle/controls/control-quarterly-access-review-synthetic.md).
 
 ## Field Mapping
 
@@ -26,6 +26,8 @@ This table maps the canonical JSON source object at [../../examples/schema-examp
 | `provenance` | Body section `# Provenance` | Partial mapping | OKF citations can cite sources, but OKF v0.1 does not define provenance fields. |
 | `last_reviewed_date` | Body section `# Provenance` | Partial mapping | OKF `timestamp` expects an ISO 8601 datetime for last meaningful change. The source has a date, so the example does not invent a time. |
 | `related_objects` | Body section `# Relationships` | Partial mapping | Markdown links can express relationships, but OKF v0.1 treats graph edges as untyped unless prose supplies context. |
+| `related_objects.relationship_type` | Body section `# Relationships` | Partial mapping | Outgoing typed relationships can be represented as Markdown links and text. OKF v0.1 does not define standard fields for typed relationships. |
+| Derived incoming relationship lookup | Body section `# Incoming Relationships` | Partial mapping | Incoming relationships can be calculated from the canonical relationship records and displayed as Markdown links. OKF v0.1 does not define standard fields for backlinks. This example does not claim formal OKF support for backlink semantics. |
 | `assertions` | Body section `# Assertions` | Partial mapping | OKF v0.1 does not define an assertion model. |
 | `evidence` | Body section `# Evidence` and `# Citations` | Partial mapping | OKF citations preserve evidence links, but evidence IDs and confidence semantics are not standard OKF fields. |
 | `policy_category` | Body section `# Policy Content` | Partial mapping | OKF tags could classify concepts, but this example avoids custom category semantics in frontmatter. |
@@ -39,6 +41,7 @@ This table maps the canonical JSON source object at [../../examples/schema-examp
 | --- | --- |
 | Permission enforcement | OKF v0.1 stores markdown and frontmatter. It does not enforce access policy, denied uses, or handling notes. |
 | Typed relationship semantics | OKF v0.1 treats links as directed edges whose exact relationship is conveyed by surrounding prose. |
+| Backlink semantics | OKF v0.1 does not define a standard backlink field. The example derives incoming relationships from canonical relationship records and displays them as Markdown links for navigation. |
 | Canonical JSON Schema validation | OKF v0.1 does not validate the repository's JSON schema constraints. |
 | Object lifecycle semantics | OKF v0.1 bundle versioning does not replace policy version, effective date, expiration date, or supersession rules. |
 | Provenance model equivalence | OKF v0.1 citations can cite sources, but they do not carry the repository's full provenance object. |

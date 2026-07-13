@@ -1,6 +1,6 @@
 # Open Knowledge Format Mapping
 
-This directory contains a worked Open Knowledge Format example for the existing canonical JSON policy object at [../../examples/schema-examples/policy.example.json](../../examples/schema-examples/policy.example.json). The source object describes synthetic customer record system access review; this repository does not currently contain a separate canonical JSON customer data retention policy object.
+This directory contains a worked Open Knowledge Format example for the existing canonical JSON policy object at [../../examples/schema-examples/policy.example.json](../../examples/schema-examples/policy.example.json) and control object at [../../examples/schema-examples/control.example.json](../../examples/schema-examples/control.example.json). The source objects describe synthetic customer record system access review; this repository does not currently contain a separate canonical JSON customer data retention policy object.
 
 The OKF example is a projection, not a replacement for the repository's canonical JSON representation. OKF is treated here as one example of the direction toward portable enterprise knowledge, not as this repository's canonical format or preferred target.
 
@@ -18,6 +18,13 @@ The OKF example is a projection, not a replacement for the repository's canonica
 - [mapping-table.md](mapping-table.md) explains direct mappings, partial mappings, and unsupported concepts.
 - [bundle/index.md](bundle/index.md) is the root index for the OKF v0.1 bundle.
 - [bundle/policies/policy-access-review-synthetic.md](bundle/policies/policy-access-review-synthetic.md) is the OKF concept document derived from the canonical JSON source object.
+- [bundle/controls/control-quarterly-access-review-synthetic.md](bundle/controls/control-quarterly-access-review-synthetic.md) is the OKF control concept document derived from the canonical JSON control source object.
+
+## Relationship And Backlink Example
+
+The policy links to the control it requires. The control links to the policy it implements. The control also displays the policy as an incoming relationship.
+
+The incoming relationship is derived from the canonical source records. OKF v0.1 supplies the Markdown bundle structure, but it does not define a standard backlink field or typed relationship model. The backlink display is a repository convention for making canonical relationships easier to navigate.
 
 ## Conformance Boundary
 

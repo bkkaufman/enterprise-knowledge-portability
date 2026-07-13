@@ -76,7 +76,7 @@ Last reviewed date: `2026-06-30`.
 
 # Relationships
 
-Requires: `control-quarterly-access-review-synthetic`.
+Requires: [Synthetic Quarterly Access Review Control](../controls/control-quarterly-access-review-synthetic.md).
 
 The related control is represented in the source object as a typed relationship. OKF v0.1 can express the relationship as markdown text or as a link when the target concept exists in the same bundle, but the relationship type is not a standard OKF field.
 

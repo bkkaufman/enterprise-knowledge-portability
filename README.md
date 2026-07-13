@@ -101,7 +101,7 @@ Formats such as OKF, Markdown, YAML, JSON, knowledge graphs, and vendor-specific
 
 Markdown is useful for human-readable explanation. YAML and JSON are useful for portable structured records. Knowledge graphs can represent relationships and traversal. Vendor-specific agent memory can support runtime behavior. OKF and similar formats can influence how structured knowledge is exchanged. None of these should be the only place where enterprise meaning, authority, permissions, provenance, and version history exist.
 
-The pattern in this repository is to define durable knowledge records first, then adapt them to the format or runtime needed for a specific implementation.
+The pattern in this repository is to define canonical knowledge records first, then adapt them to the format or runtime needed for a specific implementation.
 
 ## Relationship To Second Brain And Wiki-Style Knowledge Systems
 
@@ -111,7 +111,7 @@ The same approach is useful inside an enterprise. Policies, controls, systems, o
 
 Enterprise knowledge also needs information that a personal knowledge system may not require. Each record may need an authoritative source, ownership, permissions, effective dates, provenance, and a defined lifecycle. Relationships also need clear meaning. A policy may require a control, a control may implement a policy, and a newer record may supersede an earlier one.
 
-**Backlinks** make these relationships visible from both directions. A policy page can point to the control required, while the control page can show every policy that depends on it. The canonical relationship record remains the source, and the readable pages expose that structure in a form that people and AI systems can follow.
+**Backlinks** make these relationships visible from both directions. A policy page can point to the control required, while the control page can show every policy that depends on it. In this repository, the backlink is derived from the canonical `related_objects` entries in the source records and displayed in the Markdown projection.
 
 ## Open Knowledge Format Example
 
@@ -137,8 +137,12 @@ Explore the example:
 - [OKF mapping overview](mappings/okf/README.md)
 - [OKF bundle index](mappings/okf/bundle/index.md)
 - [OKF policy concept](mappings/okf/bundle/policies/policy-access-review-synthetic.md)
+- [OKF control concept](mappings/okf/bundle/controls/control-quarterly-access-review-synthetic.md)
 - [Field mapping table](mappings/okf/mapping-table.md)
 - [Canonical JSON source object](examples/schema-examples/policy.example.json)
+- [Canonical JSON control source object](examples/schema-examples/control.example.json)
+
+The bundle also shows a relationship in both directions: the policy links to the control it requires, and the [control displays the policy as an incoming relationship](mappings/okf/bundle/controls/control-quarterly-access-review-synthetic.md#incoming-relationships).
 
 The OKF representation is a projection of the canonical knowledge object. It demonstrates how OKF can carry portable knowledge while also making clear which governance semantics map directly, which map partially, and which remain outside the current OKF specification.
 
