@@ -1,0 +1,126 @@
+{
+  "id": "authority-resolution-access-review-2026-07-01-synthetic",
+  "object_type": "authority_resolution",
+  "question": "Which record controls an access review policy decision on 2026-07-01?",
+  "request": {
+    "knowledge_domain": "identity-and-access",
+    "decision_type": "policy_interpretation",
+    "requested_use": "control_requirement_evaluation",
+    "jurisdiction": [
+      "jurisdiction-example-north-synthetic"
+    ],
+    "applicability": [
+      "capability-customer-record-management-synthetic"
+    ],
+    "decision_date": "2026-07-01",
+    "requesting_system": "system-workflow-system-synthetic"
+  },
+  "resolution_date": "2026-07-01",
+  "selected": {
+    "controlling_knowledge_object": {
+      "id": "policy-access-review-v2-synthetic",
+      "title": "Quarterly Access Review Policy",
+      "lifecycle_status": "active",
+      "effective_from": "2026-01-01",
+      "effective_to": null,
+      "supersedes": [
+        "policy-access-review-v1-synthetic"
+      ]
+    },
+    "controlling_artifact": {
+      "id": "artifact-approved-policy-export-synthetic",
+      "title": "Approved Export Of Quarterly Access Review Policy",
+      "artifact_role": "approved_export",
+      "authority_status": "controlled_representation",
+      "storage_location": {
+        "system_id": "system-policy-management-synthetic",
+        "system_name": "Synthetic Policy Management System"
+      },
+      "source_uri": "https://policy-management.example.invalid/artifacts/access-review-policy-v2-export.pdf"
+    },
+    "asserting_authority": {
+      "authority_id": "authority-policy-standards-board-synthetic",
+      "authority_type": "board",
+      "authority_name": "Synthetic Policy Standards Board",
+      "authority_uri": "https://governance.example.invalid/authorities/policy-standards-board"
+    },
+    "authority_scope": {
+      "knowledge_domain": "identity-and-access",
+      "decision_type": "policy_interpretation",
+      "permitted_uses": [
+        "policy_interpretation",
+        "control_requirement_evaluation",
+        "workflow_selection"
+      ],
+      "jurisdiction": [
+        "jurisdiction-example-north-synthetic"
+      ],
+      "applicability": [
+        "capability-customer-record-management-synthetic"
+      ],
+      "effective_on": "2026-07-01",
+      "required_lifecycle_status": "active",
+      "required_authority": "authority-policy-standards-board-synthetic"
+    },
+    "selection_reasons": [
+      "The policy object is active on 2026-07-01.",
+      "The policy object applies to the requested knowledge domain, jurisdiction, and capability.",
+      "The Synthetic Policy Standards Board is the authority permitted to approve access review policy requirements.",
+      "Policy version 2 supersedes policy version 1 for decisions on or after 2026-01-01.",
+      "The approved export represents the active policy object and permits policy interpretation, control requirement evaluation, and workflow selection in this synthetic example."
+    ]
+  },
+  "excluded_candidates": [
+    {
+      "id": "artifact-ai-generated-policy-summary-synthetic",
+      "title": "AI Generated Summary Of Quarterly Access Review Policy",
+      "candidate_type": "document_artifact",
+      "excluded_because": [
+        "It is a non-authoritative derivative summary.",
+        "It prohibits policy interpretation, control requirement evaluation, operational execution, and production decisioning.",
+        "It has no verification record showing approval as a policy source."
+      ]
+    },
+    {
+      "id": "artifact-obsolete-policy-copy-synthetic",
+      "title": "Obsolete Collaboration Copy Of Access Review Policy",
+      "candidate_type": "document_artifact",
+      "excluded_because": [
+        "It represents policy-access-review-v1-synthetic, which was superseded by policy-access-review-v2-synthetic on 2026-01-01.",
+        "Its effective period ended on 2025-12-31.",
+        "Its permissions prohibit policy interpretation and control requirement evaluation."
+      ]
+    },
+    {
+      "id": "artifact-generated-operating-procedure-synthetic",
+      "title": "Generated Quarterly Access Review Operating Procedure",
+      "candidate_type": "document_artifact",
+      "excluded_because": [
+        "It is pending approval and has authority_status unverified.",
+        "It was derived from a non-authoritative AI summary.",
+        "It requires separate approval before it can govern operational execution."
+      ]
+    },
+    {
+      "id": "artifact-verified-policy-copy-synthetic",
+      "title": "Verified Collaboration Copy Of Quarterly Access Review Policy",
+      "candidate_type": "document_artifact",
+      "excluded_because": [
+        "It is a verified replica stored in a collaboration repository, not the controlling source location.",
+        "The matching fingerprint verifies byte identity with the approved export but does not transfer source authority to the storage location."
+      ]
+    }
+  ],
+  "resolution_rules_applied": [
+    "Identify the requested knowledge domain and decision type.",
+    "Filter candidates by jurisdiction and applicability.",
+    "Filter candidates by effective date and lifecycle status.",
+    "Require an authority permitted to assert the record.",
+    "Resolve supersession before considering copies or derivatives.",
+    "Evaluate artifact lineage and verification.",
+    "Enforce permitted and prohibited uses.",
+    "Block or escalate if unresolved conflicts remain.",
+    "Return the selected record and explain excluded alternatives."
+  ],
+  "notes": "This example does not claim factual truth. It shows how governed metadata can expose which synthetic record controls a scoped decision."
+}

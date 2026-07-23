@@ -17,8 +17,8 @@ The example shows how policies, controls, systems, owners, jurisdictions, capabi
 - [conflict-example/conflicting-records.yaml](conflict-example/conflicting-records.yaml) contains two intentionally conflicting synthetic records.
 - [supersession-example/README.md](supersession-example/README.md) explains the supersession example.
 - [supersession-example/superseded-policies.yaml](supersession-example/superseded-policies.yaml) contains a synthetic policy version chain.
+- [../document-authority-and-derivation/README.md](../document-authority-and-derivation/README.md) explains how the same access review policy domain distinguishes authoritative records from copies and derivatives.
 
 ## Portability Goal
 
 The same source records can be loaded into many downstream systems because the durable knowledge is expressed before any platform-specific implementation choice is made.
-

@@ -20,19 +20,7 @@
           "const": "relationship"
         },
         "relationship_type": {
-          "type": "string",
-          "enum": [
-            "requires_control",
-            "implements_policy",
-            "operates_on_system",
-            "owned_by",
-            "stewarded_by",
-            "applies_to_jurisdiction",
-            "covers_capability",
-            "supersedes",
-            "conflicts_with",
-            "references"
-          ]
+          "$ref": "knowledge-object.schema.json#/$defs/relationshipType"
         },
         "from_object": {
           "$ref": "knowledge-object.schema.json#/$defs/syntheticId"

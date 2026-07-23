@@ -175,20 +175,34 @@
           "$ref": "#/$defs/syntheticId"
         },
         "relationship_type": {
-          "type": "string",
-          "enum": [
-            "requires",
-            "implements",
-            "applies_to",
-            "owned_by",
-            "stewarded_by",
-            "supersedes",
-            "conflicts_with",
-            "references"
-          ]
+          "$ref": "#/$defs/relationshipType"
         }
       },
       "additionalProperties": false
+    },
+    "relationshipType": {
+      "type": "string",
+      "enum": [
+        "requires",
+        "implements",
+        "applies_to",
+        "owned_by",
+        "stewarded_by",
+        "requires_control",
+        "implements_policy",
+        "operates_on_system",
+        "applies_to_jurisdiction",
+        "covers_capability",
+        "supersedes",
+        "conflicts_with",
+        "references",
+        "represents",
+        "exported_from",
+        "exact_copy_of",
+        "derived_from",
+        "summarizes",
+        "translated_from"
+      ]
     },
     "accessPolicy": {
       "type": "object",

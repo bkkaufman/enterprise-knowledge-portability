@@ -1,0 +1,369 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.example.invalid/enterprise-knowledge-portability/document-artifact.schema.json",
+  "title": "Portable Document Artifact",
+  "description": "Synthetic document artifact record for files, exports, copies, summaries, translations, attachments, and generated documents that represent or derive from portable knowledge objects.",
+  "type": "object",
+  "required": [
+    "id",
+    "object_type",
+    "title",
+    "description",
+    "artifact_role",
+    "lifecycle_status",
+    "authority_status",
+    "represented_knowledge_object",
+    "storage_location",
+    "source_uri",
+    "version",
+    "effective_from",
+    "effective_to",
+    "captured_date",
+    "media_type",
+    "provenance",
+    "permissions",
+    "content_fingerprint",
+    "verification",
+    "related_objects",
+    "related_artifacts"
+  ],
+  "properties": {
+    "id": {
+      "$ref": "knowledge-object.schema.json#/$defs/syntheticId"
+    },
+    "object_type": {
+      "const": "document_artifact"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1
+    },
+    "artifact_role": {
+      "type": "string",
+      "enum": [
+        "authoritative_record",
+        "approved_export",
+        "verified_copy",
+        "uncontrolled_copy",
+        "derived_summary",
+        "generated_procedure",
+        "translation"
+      ]
+    },
+    "lifecycle_status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "active",
+        "inactive",
+        "superseded",
+        "retired",
+        "pending_approval"
+      ]
+    },
+    "authority_status": {
+      "type": "string",
+      "enum": [
+        "authoritative",
+        "controlled_representation",
+        "verified_replica",
+        "non_authoritative",
+        "superseded",
+        "unverified"
+      ]
+    },
+    "represented_knowledge_object": {
+      "anyOf": [
+        {
+          "$ref": "knowledge-object.schema.json#/$defs/syntheticId"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "storage_location": {
+      "type": "object",
+      "required": [
+        "system_id",
+        "system_name",
+        "repository_type"
+      ],
+      "properties": {
+        "system_id": {
+          "$ref": "knowledge-object.schema.json#/$defs/syntheticId"
+        },
+        "system_name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "repository_type": {
+          "type": "string",
+          "enum": [
+            "policy_management_system",
+            "collaboration_repository",
+            "ai_summarization_service",
+            "workflow_system",
+            "example_repository"
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "source_uri": {
+      "$ref": "knowledge-object.schema.json#/$defs/syntheticUriReference"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^v[0-9]+(\\.[0-9]+){0,2}$"
+    },
+    "effective_from": {
+      "type": "string",
+      "format": "date"
+    },
+    "effective_to": {
+      "$ref": "knowledge-object.schema.json#/$defs/dateOrNull"
+    },
+    "captured_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "media_type": {
+      "type": "string",
+      "enum": [
+        "application/json",
+        "application/pdf",
+        "text/html",
+        "text/markdown",
+        "text/plain"
+      ]
+    },
+    "provenance": {
+      "$ref": "#/$defs/artifactProvenance"
+    },
+    "permissions": {
+      "$ref": "#/$defs/artifactPermissions"
+    },
+    "content_fingerprint": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/contentFingerprint"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "verification": {
+      "$ref": "#/$defs/verification"
+    },
+    "related_objects": {
+      "type": "array",
+      "items": {
+        "$ref": "knowledge-object.schema.json#/$defs/relatedObject"
+      },
+      "uniqueItems": true
+    },
+    "related_artifacts": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/relatedArtifact"
+      },
+      "uniqueItems": true
+    },
+    "example_content": {
+      "type": "string",
+      "description": "Synthetic content used only when this public example needs a real fingerprint over inspectable bytes."
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "artifactProvenance": {
+      "type": "object",
+      "required": [
+        "created_by",
+        "created_at",
+        "derivation",
+        "source_record_url",
+        "change_summary"
+      ],
+      "properties": {
+        "created_by": {
+          "$ref": "knowledge-object.schema.json#/$defs/syntheticId"
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date"
+        },
+        "derivation": {
+          "type": "string",
+          "enum": [
+            "synthetic_authoring",
+            "synthetic_export",
+            "synthetic_copy",
+            "derived_from_synthetic_source",
+            "ai_generated_summary",
+            "generated_from_policy"
+          ]
+        },
+        "source_record_url": {
+          "$ref": "knowledge-object.schema.json#/$defs/syntheticUriReference"
+        },
+        "change_summary": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "artifactPermissions": {
+      "type": "object",
+      "required": [
+        "classification",
+        "permitted_uses",
+        "prohibited_uses",
+        "handling_notes"
+      ],
+      "properties": {
+        "classification": {
+          "type": "string",
+          "enum": [
+            "public_example",
+            "internal_example",
+            "restricted_example"
+          ]
+        },
+        "permitted_uses": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "architecture_reference",
+              "schema_validation",
+              "synthetic_demo",
+              "policy_interpretation",
+              "control_requirement_evaluation",
+              "workflow_selection",
+              "copy_verification"
+            ]
+          },
+          "uniqueItems": true
+        },
+        "prohibited_uses": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "policy_interpretation",
+              "control_requirement_evaluation",
+              "operational_execution",
+              "production_decisioning",
+              "production_compliance_attestation",
+              "external_distribution"
+            ]
+          },
+          "uniqueItems": true
+        },
+        "handling_notes": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "contentFingerprint": {
+      "type": "object",
+      "required": [
+        "algorithm",
+        "value",
+        "fingerprinted_field",
+        "notes"
+      ],
+      "properties": {
+        "algorithm": {
+          "const": "sha-256"
+        },
+        "value": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "fingerprinted_field": {
+          "type": "string",
+          "enum": [
+            "example_content",
+            "external_artifact_bytes"
+          ]
+        },
+        "notes": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "verification": {
+      "type": "object",
+      "required": [
+        "status",
+        "verified_by",
+        "verified_date",
+        "method",
+        "notes"
+      ],
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "verified",
+            "unverified",
+            "not_applicable",
+            "expired",
+            "failed"
+          ]
+        },
+        "verified_by": {
+          "anyOf": [
+            {
+              "$ref": "knowledge-object.schema.json#/$defs/syntheticId"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "verified_date": {
+          "$ref": "knowledge-object.schema.json#/$defs/dateOrNull"
+        },
+        "method": {
+          "type": "string",
+          "minLength": 1
+        },
+        "notes": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    },
+    "relatedArtifact": {
+      "type": "object",
+      "required": [
+        "id",
+        "relationship_type"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "knowledge-object.schema.json#/$defs/syntheticId"
+        },
+        "relationship_type": {
+          "$ref": "knowledge-object.schema.json#/$defs/relationshipType"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "id": "artifact-ai-generated-policy-summary-synthetic",
+  "object_type": "document_artifact",
+  "title": "AI Generated Summary Of Quarterly Access Review Policy",
+  "description": "A synthetic AI generated summary derived from the approved policy export.",
+  "artifact_role": "derived_summary",
+  "lifecycle_status": "active",
+  "authority_status": "non_authoritative",
+  "represented_knowledge_object": "policy-access-review-v2-synthetic",
+  "storage_location": {
+    "system_id": "system-ai-summarization-service-synthetic",
+    "system_name": "Synthetic AI Summarization Service",
+    "repository_type": "ai_summarization_service"
+  },
+  "source_uri": "https://ai-summary.example.invalid/summaries/access-review-policy-v2-summary",
+  "version": "v1.0",
+  "effective_from": "2026-01-01",
+  "effective_to": null,
+  "captured_date": "2026-06-15",
+  "media_type": "text/markdown",
+  "provenance": {
+    "created_by": "system-ai-summarization-service-synthetic",
+    "created_at": "2026-06-15",
+    "derivation": "ai_generated_summary",
+    "source_record_url": "https://policy-management.example.invalid/artifacts/access-review-policy-v2-export.pdf",
+    "change_summary": "Synthetic summary generated from the approved export."
+  },
+  "permissions": {
+    "classification": "public_example",
+    "permitted_uses": [
+      "architecture_reference",
+      "schema_validation",
+      "synthetic_demo"
+    ],
+    "prohibited_uses": [
+      "policy_interpretation",
+      "control_requirement_evaluation",
+      "operational_execution",
+      "production_decisioning",
+      "production_compliance_attestation",
+      "external_distribution"
+    ],
+    "handling_notes": "Synthetic generated summary. Retrieval rank or semantic similarity cannot make it authoritative."
+  },
+  "content_fingerprint": null,
+  "verification": {
+    "status": "unverified",
+    "verified_by": null,
+    "verified_date": null,
+    "method": "No approved comparison or review recorded.",
+    "notes": "The summary is a derivative and is not approved for policy interpretation or production decisioning."
+  },
+  "related_objects": [
+    {
+      "id": "policy-access-review-v2-synthetic",
+      "relationship_type": "references"
+    }
+  ],
+  "related_artifacts": [
+    {
+      "id": "artifact-approved-policy-export-synthetic",
+      "relationship_type": "summarizes"
+    },
+    {
+      "id": "artifact-approved-policy-export-synthetic",
+      "relationship_type": "derived_from"
+    }
+  ]
+}

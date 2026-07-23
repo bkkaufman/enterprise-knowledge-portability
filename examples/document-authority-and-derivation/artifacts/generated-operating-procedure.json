@@ -1,0 +1,65 @@
+{
+  "id": "artifact-generated-operating-procedure-synthetic",
+  "object_type": "document_artifact",
+  "title": "Generated Quarterly Access Review Operating Procedure",
+  "description": "A synthetic generated operating procedure derived from the policy summary and awaiting separate approval.",
+  "artifact_role": "generated_procedure",
+  "lifecycle_status": "pending_approval",
+  "authority_status": "unverified",
+  "represented_knowledge_object": null,
+  "storage_location": {
+    "system_id": "system-workflow-system-synthetic",
+    "system_name": "Synthetic Workflow System",
+    "repository_type": "workflow_system"
+  },
+  "source_uri": "https://workflow.example.invalid/procedures/generated-quarterly-access-review",
+  "version": "v1.0",
+  "effective_from": "2026-06-16",
+  "effective_to": null,
+  "captured_date": "2026-06-16",
+  "media_type": "text/markdown",
+  "provenance": {
+    "created_by": "system-workflow-system-synthetic",
+    "created_at": "2026-06-16",
+    "derivation": "generated_from_policy",
+    "source_record_url": "https://ai-summary.example.invalid/summaries/access-review-policy-v2-summary",
+    "change_summary": "Synthetic procedure generated from a policy summary for review."
+  },
+  "permissions": {
+    "classification": "public_example",
+    "permitted_uses": [
+      "architecture_reference",
+      "schema_validation",
+      "synthetic_demo"
+    ],
+    "prohibited_uses": [
+      "policy_interpretation",
+      "control_requirement_evaluation",
+      "operational_execution",
+      "production_decisioning",
+      "production_compliance_attestation",
+      "external_distribution"
+    ],
+    "handling_notes": "Synthetic generated procedure. It requires separate approval before it can govern operational execution."
+  },
+  "content_fingerprint": null,
+  "verification": {
+    "status": "unverified",
+    "verified_by": null,
+    "verified_date": null,
+    "method": "No procedure approval recorded.",
+    "notes": "The generated procedure is not a controlling procedure or policy source."
+  },
+  "related_objects": [
+    {
+      "id": "policy-access-review-v2-synthetic",
+      "relationship_type": "references"
+    }
+  ],
+  "related_artifacts": [
+    {
+      "id": "artifact-ai-generated-policy-summary-synthetic",
+      "relationship_type": "derived_from"
+    }
+  ]
+}

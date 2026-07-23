@@ -1,0 +1,501 @@
+{
+  "relationships": [
+    {
+      "id": "relationship-approved-export-represents-policy-access-review-v2-synthetic",
+      "object_type": "relationship",
+      "title": "Approved Export Represents Active Access Review Policy",
+      "description": "A synthetic relationship stating that the approved export represents the active access review policy object.",
+      "status": "active",
+      "version": "v1.0",
+      "effective_date": "2026-01-01",
+      "expiration_date": null,
+      "supersedes": [],
+      "authoritative_source": "Synthetic Knowledge Stewardship Group",
+      "source_uri": "../artifacts/approved-policy-export.json",
+      "owner": "owner-governance-office-synthetic",
+      "steward": "steward-knowledge-management-synthetic",
+      "jurisdiction": [
+        "jurisdiction-global-synthetic"
+      ],
+      "applicability": [
+        "capability-customer-record-management-synthetic"
+      ],
+      "classification": "public_example",
+      "access_policy": {
+        "policy_id": "access-policy-public-example-synthetic",
+        "allowed_uses": [
+          "read",
+          "validate",
+          "transform",
+          "publish_example"
+        ],
+        "denied_uses": [
+          "production_decisioning"
+        ],
+        "handling_notes": "Synthetic lineage relationship example only."
+      },
+      "provenance": {
+        "created_by": "author-public-reference-synthetic",
+        "created_date": "2026-01-01",
+        "method": "synthetic_authoring",
+        "change_summary": "Initial relationship between approved export and policy object."
+      },
+      "last_reviewed_date": "2026-06-30",
+      "related_objects": [
+        {
+          "id": "artifact-approved-policy-export-synthetic",
+          "relationship_type": "references"
+        },
+        {
+          "id": "policy-access-review-v2-synthetic",
+          "relationship_type": "references"
+        }
+      ],
+      "assertions": [
+        {
+          "assertion_id": "assertion-approved-export-represents-policy-synthetic",
+          "predicate": "represents",
+          "object": "policy-access-review-v2-synthetic",
+          "confidence": "declared"
+        }
+      ],
+      "evidence": [
+        {
+          "evidence_id": "evidence-approved-export-lineage-synthetic",
+          "summary": "Synthetic artifact metadata states that the export represents the active access review policy.",
+          "uri": "../artifacts/approved-policy-export.json"
+        }
+      ],
+      "relationship_type": "represents",
+      "from_object": "artifact-approved-policy-export-synthetic",
+      "to_object": "policy-access-review-v2-synthetic",
+      "rationale": "The PDF export was generated from the active approved policy record."
+    },
+    {
+      "id": "relationship-approved-export-exported-from-policy-access-review-v2-synthetic",
+      "object_type": "relationship",
+      "title": "Approved Export Was Exported From Active Policy",
+      "description": "A synthetic relationship stating that the approved export was exported from the active policy object.",
+      "status": "active",
+      "version": "v1.0",
+      "effective_date": "2026-01-01",
+      "expiration_date": null,
+      "supersedes": [],
+      "authoritative_source": "Synthetic Knowledge Stewardship Group",
+      "source_uri": "../artifacts/approved-policy-export.json",
+      "owner": "owner-governance-office-synthetic",
+      "steward": "steward-knowledge-management-synthetic",
+      "jurisdiction": [
+        "jurisdiction-global-synthetic"
+      ],
+      "applicability": [
+        "capability-customer-record-management-synthetic"
+      ],
+      "classification": "public_example",
+      "access_policy": {
+        "policy_id": "access-policy-public-example-synthetic",
+        "allowed_uses": [
+          "read",
+          "validate",
+          "transform",
+          "publish_example"
+        ],
+        "denied_uses": [
+          "production_decisioning"
+        ],
+        "handling_notes": "Synthetic lineage relationship example only."
+      },
+      "provenance": {
+        "created_by": "author-public-reference-synthetic",
+        "created_date": "2026-01-01",
+        "method": "synthetic_authoring",
+        "change_summary": "Initial export relationship for the approved policy export."
+      },
+      "last_reviewed_date": "2026-06-30",
+      "related_objects": [
+        {
+          "id": "artifact-approved-policy-export-synthetic",
+          "relationship_type": "references"
+        },
+        {
+          "id": "policy-access-review-v2-synthetic",
+          "relationship_type": "references"
+        }
+      ],
+      "assertions": [
+        {
+          "assertion_id": "assertion-approved-export-exported-from-policy-synthetic",
+          "predicate": "exported from",
+          "object": "policy-access-review-v2-synthetic",
+          "confidence": "declared"
+        }
+      ],
+      "evidence": [
+        {
+          "evidence_id": "evidence-approved-export-source-synthetic",
+          "summary": "Synthetic provenance states that the export was generated from the policy record.",
+          "uri": "../artifacts/approved-policy-export.json"
+        }
+      ],
+      "relationship_type": "exported_from",
+      "from_object": "artifact-approved-policy-export-synthetic",
+      "to_object": "policy-access-review-v2-synthetic",
+      "rationale": "The export is a representation generated from the approved policy object, not a separate authority."
+    },
+    {
+      "id": "relationship-verified-copy-exact-copy-of-approved-export-synthetic",
+      "object_type": "relationship",
+      "title": "Verified Copy Is Exact Copy Of Approved Export",
+      "description": "A synthetic relationship stating that the collaboration repository copy is an exact copy of the approved export.",
+      "status": "active",
+      "version": "v1.0",
+      "effective_date": "2026-01-02",
+      "expiration_date": null,
+      "supersedes": [],
+      "authoritative_source": "Synthetic Knowledge Stewardship Group",
+      "source_uri": "../artifacts/verified-policy-copy.json",
+      "owner": "owner-governance-office-synthetic",
+      "steward": "steward-knowledge-management-synthetic",
+      "jurisdiction": [
+        "jurisdiction-global-synthetic"
+      ],
+      "applicability": [
+        "capability-customer-record-management-synthetic"
+      ],
+      "classification": "public_example",
+      "access_policy": {
+        "policy_id": "access-policy-public-example-synthetic",
+        "allowed_uses": [
+          "read",
+          "validate",
+          "transform",
+          "publish_example"
+        ],
+        "denied_uses": [
+          "production_decisioning"
+        ],
+        "handling_notes": "Synthetic exact copy relationship example only."
+      },
+      "provenance": {
+        "created_by": "author-public-reference-synthetic",
+        "created_date": "2026-01-02",
+        "method": "synthetic_authoring",
+        "change_summary": "Initial exact copy relationship for the verified collaboration copy."
+      },
+      "last_reviewed_date": "2026-06-30",
+      "related_objects": [
+        {
+          "id": "artifact-verified-policy-copy-synthetic",
+          "relationship_type": "references"
+        },
+        {
+          "id": "artifact-approved-policy-export-synthetic",
+          "relationship_type": "references"
+        }
+      ],
+      "assertions": [
+        {
+          "assertion_id": "assertion-verified-copy-exact-copy-synthetic",
+          "predicate": "has matching SHA-256 fingerprint",
+          "object": "artifact-approved-policy-export-synthetic",
+          "confidence": "declared"
+        }
+      ],
+      "evidence": [
+        {
+          "evidence_id": "evidence-verified-copy-fingerprint-synthetic",
+          "summary": "The verified copy and approved export carry the same SHA-256 over the same example content.",
+          "uri": "../artifacts/verified-policy-copy.json"
+        }
+      ],
+      "relationship_type": "exact_copy_of",
+      "from_object": "artifact-verified-policy-copy-synthetic",
+      "to_object": "artifact-approved-policy-export-synthetic",
+      "rationale": "The content fingerprints match, so the example copy is byte identical to the approved export content."
+    },
+    {
+      "id": "relationship-obsolete-copy-represents-policy-access-review-v1-synthetic",
+      "object_type": "relationship",
+      "title": "Obsolete Copy Represents Superseded Policy",
+      "description": "A synthetic relationship stating that the obsolete collaboration copy represents policy version 1.",
+      "status": "active",
+      "version": "v1.0",
+      "effective_date": "2025-02-01",
+      "expiration_date": "2025-12-31",
+      "supersedes": [],
+      "authoritative_source": "Synthetic Knowledge Stewardship Group",
+      "source_uri": "../artifacts/obsolete-policy-copy.json",
+      "owner": "owner-governance-office-synthetic",
+      "steward": "steward-knowledge-management-synthetic",
+      "jurisdiction": [
+        "jurisdiction-global-synthetic"
+      ],
+      "applicability": [
+        "capability-customer-record-management-synthetic"
+      ],
+      "classification": "public_example",
+      "access_policy": {
+        "policy_id": "access-policy-public-example-synthetic",
+        "allowed_uses": [
+          "read",
+          "validate",
+          "transform",
+          "publish_example"
+        ],
+        "denied_uses": [
+          "production_decisioning"
+        ],
+        "handling_notes": "Synthetic obsolete copy relationship example only."
+      },
+      "provenance": {
+        "created_by": "author-public-reference-synthetic",
+        "created_date": "2026-01-02",
+        "method": "synthetic_authoring",
+        "change_summary": "Initial relationship between obsolete copy and superseded policy."
+      },
+      "last_reviewed_date": "2026-06-30",
+      "related_objects": [
+        {
+          "id": "artifact-obsolete-policy-copy-synthetic",
+          "relationship_type": "references"
+        },
+        {
+          "id": "policy-access-review-v1-synthetic",
+          "relationship_type": "references"
+        }
+      ],
+      "assertions": [
+        {
+          "assertion_id": "assertion-obsolete-copy-represents-v1-synthetic",
+          "predicate": "represents superseded policy",
+          "object": "policy-access-review-v1-synthetic",
+          "confidence": "declared"
+        }
+      ],
+      "evidence": [
+        {
+          "evidence_id": "evidence-obsolete-copy-lineage-synthetic",
+          "summary": "Synthetic artifact metadata states that the copy represents policy version 1.",
+          "uri": "../artifacts/obsolete-policy-copy.json"
+        }
+      ],
+      "relationship_type": "represents",
+      "from_object": "artifact-obsolete-policy-copy-synthetic",
+      "to_object": "policy-access-review-v1-synthetic",
+      "rationale": "The collaboration repository copy points to the superseded version of the policy."
+    },
+    {
+      "id": "relationship-ai-summary-summarizes-approved-export-synthetic",
+      "object_type": "relationship",
+      "title": "AI Summary Summarizes Approved Export",
+      "description": "A synthetic relationship stating that the AI generated summary summarizes the approved policy export.",
+      "status": "active",
+      "version": "v1.0",
+      "effective_date": "2026-06-15",
+      "expiration_date": null,
+      "supersedes": [],
+      "authoritative_source": "Synthetic Knowledge Stewardship Group",
+      "source_uri": "../artifacts/ai-generated-policy-summary.json",
+      "owner": "owner-governance-office-synthetic",
+      "steward": "steward-knowledge-management-synthetic",
+      "jurisdiction": [
+        "jurisdiction-global-synthetic"
+      ],
+      "applicability": [
+        "capability-customer-record-management-synthetic"
+      ],
+      "classification": "public_example",
+      "access_policy": {
+        "policy_id": "access-policy-public-example-synthetic",
+        "allowed_uses": [
+          "read",
+          "validate",
+          "transform",
+          "publish_example"
+        ],
+        "denied_uses": [
+          "production_decisioning"
+        ],
+        "handling_notes": "Synthetic summary relationship example only."
+      },
+      "provenance": {
+        "created_by": "author-public-reference-synthetic",
+        "created_date": "2026-06-15",
+        "method": "synthetic_authoring",
+        "change_summary": "Initial summary relationship for the AI generated summary."
+      },
+      "last_reviewed_date": "2026-06-30",
+      "related_objects": [
+        {
+          "id": "artifact-ai-generated-policy-summary-synthetic",
+          "relationship_type": "references"
+        },
+        {
+          "id": "artifact-approved-policy-export-synthetic",
+          "relationship_type": "references"
+        }
+      ],
+      "assertions": [
+        {
+          "assertion_id": "assertion-ai-summary-summarizes-export-synthetic",
+          "predicate": "summarizes",
+          "object": "artifact-approved-policy-export-synthetic",
+          "confidence": "declared"
+        }
+      ],
+      "evidence": [
+        {
+          "evidence_id": "evidence-ai-summary-lineage-synthetic",
+          "summary": "Synthetic artifact metadata states that the summary was generated from the approved export.",
+          "uri": "../artifacts/ai-generated-policy-summary.json"
+        }
+      ],
+      "relationship_type": "summarizes",
+      "from_object": "artifact-ai-generated-policy-summary-synthetic",
+      "to_object": "artifact-approved-policy-export-synthetic",
+      "rationale": "The summary is a transformed derivative of the approved export and cannot stand in for the policy."
+    },
+    {
+      "id": "relationship-generated-procedure-derived-from-ai-summary-synthetic",
+      "object_type": "relationship",
+      "title": "Generated Procedure Derived From AI Summary",
+      "description": "A synthetic relationship stating that the generated procedure derives from the AI generated summary.",
+      "status": "active",
+      "version": "v1.0",
+      "effective_date": "2026-06-16",
+      "expiration_date": null,
+      "supersedes": [],
+      "authoritative_source": "Synthetic Knowledge Stewardship Group",
+      "source_uri": "../artifacts/generated-operating-procedure.json",
+      "owner": "owner-governance-office-synthetic",
+      "steward": "steward-knowledge-management-synthetic",
+      "jurisdiction": [
+        "jurisdiction-global-synthetic"
+      ],
+      "applicability": [
+        "capability-customer-record-management-synthetic"
+      ],
+      "classification": "public_example",
+      "access_policy": {
+        "policy_id": "access-policy-public-example-synthetic",
+        "allowed_uses": [
+          "read",
+          "validate",
+          "transform",
+          "publish_example"
+        ],
+        "denied_uses": [
+          "production_decisioning"
+        ],
+        "handling_notes": "Synthetic generated procedure relationship example only."
+      },
+      "provenance": {
+        "created_by": "author-public-reference-synthetic",
+        "created_date": "2026-06-16",
+        "method": "synthetic_authoring",
+        "change_summary": "Initial derivation relationship for the generated procedure."
+      },
+      "last_reviewed_date": "2026-06-30",
+      "related_objects": [
+        {
+          "id": "artifact-generated-operating-procedure-synthetic",
+          "relationship_type": "references"
+        },
+        {
+          "id": "artifact-ai-generated-policy-summary-synthetic",
+          "relationship_type": "references"
+        }
+      ],
+      "assertions": [
+        {
+          "assertion_id": "assertion-generated-procedure-derived-from-summary-synthetic",
+          "predicate": "derived from",
+          "object": "artifact-ai-generated-policy-summary-synthetic",
+          "confidence": "declared"
+        }
+      ],
+      "evidence": [
+        {
+          "evidence_id": "evidence-generated-procedure-lineage-synthetic",
+          "summary": "Synthetic artifact metadata states that the procedure was generated from the AI summary.",
+          "uri": "../artifacts/generated-operating-procedure.json"
+        }
+      ],
+      "relationship_type": "derived_from",
+      "from_object": "artifact-generated-operating-procedure-synthetic",
+      "to_object": "artifact-ai-generated-policy-summary-synthetic",
+      "rationale": "The generated procedure inherits context from the summary but requires separate approval before it can govern operational steps."
+    },
+    {
+      "id": "relationship-policy-access-review-v2-supersedes-v1-synthetic",
+      "object_type": "relationship",
+      "title": "Access Review Policy Version 2 Supersedes Version 1",
+      "description": "A synthetic relationship stating that policy version 2 supersedes policy version 1.",
+      "status": "active",
+      "version": "v1.0",
+      "effective_date": "2026-01-01",
+      "expiration_date": null,
+      "supersedes": [],
+      "authoritative_source": "Synthetic Policy Standards Board",
+      "source_uri": "../artifacts/approved-policy-export.json",
+      "owner": "owner-governance-office-synthetic",
+      "steward": "steward-access-governance-synthetic",
+      "jurisdiction": [
+        "jurisdiction-global-synthetic"
+      ],
+      "applicability": [
+        "capability-customer-record-management-synthetic"
+      ],
+      "classification": "public_example",
+      "access_policy": {
+        "policy_id": "access-policy-public-example-synthetic",
+        "allowed_uses": [
+          "read",
+          "validate",
+          "transform",
+          "publish_example"
+        ],
+        "denied_uses": [
+          "production_decisioning"
+        ],
+        "handling_notes": "Synthetic supersession relationship example only."
+      },
+      "provenance": {
+        "created_by": "author-public-reference-synthetic",
+        "created_date": "2026-01-01",
+        "method": "synthetic_authoring",
+        "change_summary": "Policy version 2 supersedes version 1 for decisions on or after 2026-01-01."
+      },
+      "last_reviewed_date": "2026-06-30",
+      "related_objects": [
+        {
+          "id": "policy-access-review-v2-synthetic",
+          "relationship_type": "references"
+        },
+        {
+          "id": "policy-access-review-v1-synthetic",
+          "relationship_type": "references"
+        }
+      ],
+      "assertions": [
+        {
+          "assertion_id": "assertion-policy-v2-supersedes-v1-synthetic",
+          "predicate": "supersedes",
+          "object": "policy-access-review-v1-synthetic",
+          "confidence": "declared"
+        }
+      ],
+      "evidence": [
+        {
+          "evidence_id": "evidence-policy-v2-supersession-synthetic",
+          "summary": "Synthetic policy metadata states that version 2 supersedes version 1.",
+          "uri": "../artifacts/approved-policy-export.json"
+        }
+      ],
+      "relationship_type": "supersedes",
+      "from_object": "policy-access-review-v2-synthetic",
+      "to_object": "policy-access-review-v1-synthetic",
+      "rationale": "Policy version 2 is active from 2026-01-01 and replaces policy version 1."
+    }
+  ]
+}

@@ -12,6 +12,8 @@ Enterprises often encode important operating knowledge in places that are hard t
 
 This migration cost often comes with a deeper operational problem: teams can no longer tell which records are authoritative, which version applies, what a record depends on, who owns it, what evidence supports it, or whether a downstream AI or automation system is allowed to use it.
 
+[Content Becomes Cheaper; Truth Gets More Expensive](https://bradkaufman.com/writing/content-becomes-cheaper-truth-gets-more-expensive) provides background on the copies, summaries, and generated content problem. It is context for the problem, not a schema specification for this repository.
+
 ## What Portability Means Here
 
 Portability means enterprise knowledge is represented in a way that can be inspected, validated, governed, and adapted before it is loaded into a model, index, graph, workflow tool, or agent runtime.
@@ -35,6 +37,8 @@ The first release demonstrates a small synthetic domain: enterprise policy and c
 
 It includes portable records for policies, controls, business capabilities, systems, owners, jurisdictions, effective dates, superseded versions, source authority, permissions, provenance, conflicting records, and relationships between policies and operational controls.
 
+It also includes a document authority example showing how portable records can distinguish authoritative records from copies and derivatives by preserving authority, applicability, effective dates, supersession, provenance, lineage, permissions, and verification metadata. The model does not determine factual truth by itself; an organization must define authority and governance rules, which the records then preserve and expose to downstream systems.
+
 The repository does not implement an ontology, RDF model, OWL model, SHACL validation layer, graph database, vector database, retrieval pipeline, or agent framework. Those may be downstream implementation choices, but they are not the source representation.
 
 ## Overview
@@ -46,11 +50,13 @@ flowchart TD
   A --> D[Business capabilities]
   A --> E[Systems]
   A --> F[Owners and jurisdictions]
+  A --> N[Document artifacts]
   B --> G[Relationship records]
   C --> G
   D --> G
   E --> G
   F --> G
+  N --> G
   G --> H[Authority, provenance, permissions, versions, conflicts]
   H --> I[Downstream adapters]
   I --> J[AI models]
@@ -71,9 +77,13 @@ flowchart TD
 | Policy schema | [schemas/policy.schema.json](schemas/policy.schema.json) | Defines portable policy records. |
 | Control schema | [schemas/control.schema.json](schemas/control.schema.json) | Defines portable operational control records. |
 | Relationship schema | [schemas/relationship.schema.json](schemas/relationship.schema.json) | Defines relationships between portable records. |
+| Document artifact schema | [schemas/document-artifact.schema.json](schemas/document-artifact.schema.json) | Defines exports, copies, summaries, translations, attachments, and generated documents that represent or derive from knowledge objects. |
 | Format mappings | [mappings/canonical-json.md](mappings/canonical-json.md) | Shows how the reference JSON objects can be projected into other formats. |
 | Worked example | [examples/policy-and-controls/README.md](examples/policy-and-controls/README.md) | Shows the synthetic policy and control management domain. |
+| Document authority example | [examples/document-authority-and-derivation/README.md](examples/document-authority-and-derivation/README.md) | Shows how to resolve authority when copies and derivatives exist. |
 | Authoritative source pattern | [patterns/authoritative-source.md](patterns/authoritative-source.md) | Describes how records identify the authority that asserts them. |
+| Document authority pattern | [patterns/document-authority-and-derivation.md](patterns/document-authority-and-derivation.md) | Describes knowledge objects, artifacts, lineage, fingerprints, and scoped authority. |
+| Authority resolution pattern | [patterns/authority-resolution.md](patterns/authority-resolution.md) | Describes a transparent sequence for selecting the controlling record and explaining exclusions. |
 | Provenance pattern | [patterns/provenance.md](patterns/provenance.md) | Describes how records carry origin and review metadata. |
 | Versioning pattern | [patterns/versioning-and-supersession.md](patterns/versioning-and-supersession.md) | Describes how records preserve effective dates and supersession history. |
 | Permissions pattern | [patterns/permissions.md](patterns/permissions.md) | Describes how records carry usage constraints. |

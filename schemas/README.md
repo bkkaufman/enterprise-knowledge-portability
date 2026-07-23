@@ -10,7 +10,7 @@ The common schema intentionally uses plain strings, arrays, and small objects. I
 
 ## Composition
 
-[policy.schema.json](policy.schema.json) adds policy category, policy statement, obligations, and exception process. [control.schema.json](control.schema.json) adds control category, objective, type, frequency, systems, obligation mappings, and evidence expectations. [relationship.schema.json](relationship.schema.json) composes the same envelope so relationships can carry authority, provenance, access policy, and review metadata.
+[policy.schema.json](policy.schema.json) adds policy category, policy statement, obligations, and exception process. [control.schema.json](control.schema.json) adds control category, objective, type, frequency, systems, obligation mappings, and evidence expectations. [relationship.schema.json](relationship.schema.json) composes the same envelope so relationships can carry authority, provenance, access policy, and review metadata. [document-artifact.schema.json](document-artifact.schema.json) is a sibling schema for files, exports, copies, summaries, translations, attachments, and generated documents that represent or derive from knowledge objects.
 
 ## Public Example Boundary
 
@@ -25,6 +25,8 @@ Valid JSON examples are in [../examples/schema-examples](../examples/schema-exam
 - [control.example.json](../examples/schema-examples/control.example.json)
 - [relationship.example.json](../examples/schema-examples/relationship.example.json)
 
+Document artifact examples are in [../examples/document-authority-and-derivation/artifacts](../examples/document-authority-and-derivation/artifacts).
+
 ## Tradeoffs
 
 - The envelope requires the main governance fields so examples cannot omit authority, access policy, provenance, or evidence.
@@ -32,3 +34,4 @@ Valid JSON examples are in [../examples/schema-examples](../examples/schema-exam
 - Assertions use a compact predicate and object form. This is useful for validation and exchange, but it is not a substitute for a domain ontology or rule engine.
 - Access policy is descriptive metadata. It does not enforce access control by itself.
 - Relationship records are first-class objects in this reference so they can be reviewed, versioned, and traced like policies and controls.
+- Document artifacts do not compose the full common envelope because many artifacts are copies or derivatives rather than governed knowledge objects. The artifact schema reuses common identifier, URI, and relationship definitions where those fields apply.
