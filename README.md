@@ -6,7 +6,7 @@ This repository is a public reference implementation for structuring enterprise 
 
 The repository also includes an [Open Knowledge Format example](mappings/okf/README.md), showing how the same portable policy record can be represented as an OKF v0.1 Draft bundle without making OKF the canonical source model.
 
-## The Enterprise Problem
+## The Enterprise Challenge
 
 Enterprises often encode important operating knowledge in places that are hard to move: policy portals, control libraries, ticket workflows, application tables, knowledge bases, retrieval indexes, prompts, and agent memory stores. When the organization changes models, vendors, applications, or workflows, that knowledge can lose context, authority, provenance, permissions, effective dates, and relationships to the controls or systems that make it operational.
 
